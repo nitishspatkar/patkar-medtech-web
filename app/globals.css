@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-stat: var(--font-dm-mono), ui-monospace, monospace;
+
+  --color-pdl-bg: #ffffff;
+  --color-pdl-section: #f4f7f9;
+  --color-pdl-accent: #1a5f7a;
+  --color-pdl-accent-2: #2e9e8f;
+  --color-pdl-text: #1a2b3c;
+  --color-pdl-muted: #5a6a78;
+  --color-pdl-border: #dde4ea;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-pdl-bg);
+  color: var(--color-pdl-text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Subtle dot grid for section backgrounds */
+.pdl-dot-pattern {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(26, 95, 122, 0.08) 1px,
+    transparent 0
+  );
+  background-size: 24px 24px;
+}
