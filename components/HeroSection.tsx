@@ -17,7 +17,7 @@ export function HeroSection() {
 
       <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-20">
         <FadeIn>
-          <h1 className="font-heading max-w-3xl text-4xl font-bold leading-[1.15] tracking-tight text-pdl-text sm:text-5xl lg:text-[3.25rem]">
+          <h1 className="font-heading max-w-3xl text-4xl font-bold leading-[1.15] tracking-tight text-pdl-text sm:text-5xl lg:text-[3.25rem] animate-slide-up">
             What if your EHR actually{" "}
             <span className="bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent">
               understood medicine?
@@ -26,13 +26,13 @@ export function HeroSection() {
         </FadeIn>
 
         <FadeIn delayMs={80} className="mt-6">
-          <p className="max-w-2xl text-lg text-pdl-muted sm:text-xl">
+          <p className="max-w-2xl text-lg text-pdl-muted sm:text-xl animate-slide-up" style={{ animationDelay: "0.1s" }}>
             Software built by clinicians, not spreadsheet companies. Purpose-built for real clinical practice.
           </p>
         </FadeIn>
 
         <FadeIn delayMs={140} className="mt-8">
-          <p className="max-w-3xl text-base text-pdl-text sm:text-lg leading-relaxed">
+          <p className="max-w-3xl text-base text-pdl-text sm:text-lg leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
             We are Patkar Digital Labs — a physician-engineer team building secure, thoughtful digital tools designed for medicine.
           </p>
         </FadeIn>
@@ -40,7 +40,7 @@ export function HeroSection() {
         <FadeIn delayMs={200} className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
           <a
             href="#our-approach"
-            className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-pdl-accent to-pdl-accent-2 px-7 py-3.5 text-center text-base font-semibold text-pdl-bg shadow-lg shadow-pdl-accent/20 transition-all hover:shadow-xl hover:shadow-pdl-accent/30"
+            className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-pdl-accent to-pdl-accent-2 px-7 py-3.5 text-center text-base font-semibold text-pdl-bg shadow-lg shadow-pdl-accent/20 transition-all hover:shadow-xl hover:shadow-pdl-accent/30 hover:-translate-y-1"
           >
             See How We Work
           </a>

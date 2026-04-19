@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarDays, Cpu, Pill } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { FadeIn } from "./FadeIn";
 
 const projects = [
@@ -6,19 +6,16 @@ const projects = [
     title: "Implant Infrastructure & Real-Time Monitoring",
     description:
       "Connected medical devices that talk to physicians. Real-time monitoring and clinical decision support without regulatory theater.",
-    icon: Cpu,
   },
   {
     title: "Medication Safety for Humans",
     description:
       "Elderly patients forget. Caregivers lose track. Pharmacists juggle interactions. Our system prevents missed doses and dangerous interactions.",
-    icon: Pill,
   },
   {
     title: "Scheduling That Works",
     description:
       "Smart scheduling that respects clinical needs, staffing constraints, and labor law. No spreadsheet hell.",
-    icon: CalendarDays,
   },
 ];
 
@@ -42,12 +39,9 @@ export function Solutions() {
         </FadeIn>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {projects.map(({ title, description, icon: Icon }, i) => (
+          {projects.map(({ title, description }, i) => (
             <FadeIn key={title} delayMs={i * 80}>
-              <article className="flex h-full flex-col rounded-lg border border-pdl-border bg-pdl-highlight/30 p-6 shadow-lg shadow-pdl-accent/5 backdrop-blur-sm">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-pdl-accent/20 text-pdl-accent">
-                  <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
-                </div>
+              <article className="flex h-full flex-col rounded-lg border border-pdl-border bg-pdl-highlight p-6 shadow-lg shadow-pdl-accent/5">
                 <h3 className="font-heading text-xl font-semibold text-pdl-text">
                   {title}
                 </h3>
@@ -60,9 +54,9 @@ export function Solutions() {
         </div>
 
         <FadeIn delayMs={120} className="mt-12">
-          <div className="rounded-lg border border-pdl-accent/30 bg-pdl-highlight/50 px-6 py-6 shadow-lg shadow-pdl-accent/10 backdrop-blur-sm sm:flex sm:items-center sm:justify-between sm:gap-6 sm:px-8">
+          <div className="rounded-lg border border-pdl-accent/30 bg-pdl-highlight px-6 py-6 shadow-lg shadow-pdl-accent/10 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:px-8">
             <p className="text-base text-pdl-text sm:max-w-2xl">
-              Your workflows are unique. We don&apos;t force generic software. We engineer solutions that fit your practice.
+              Your practice has unique needs. We don't build generic software. We engineer solutions built for your specific context.
             </p>
             <a
               href="#contact"

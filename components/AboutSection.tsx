@@ -1,22 +1,5 @@
+import Image from "next/image";
 import { FadeIn } from "./FadeIn";
-
-const values = [
-  {
-    title: "Built by Practitioners",
-    body: "We aren't consultants observing medicine from the outside. We practice it.",
-    emoji: "🩺",
-  },
-  {
-    title: "Privacy by Design",
-    body: "Data protection isn't paperwork. It's embedded in every architectural decision.",
-    emoji: "🔐",
-  },
-  {
-    title: "Engineering That Lasts",
-    body: "Software designed for longevity, not quarterly releases.",
-    emoji: "⚙️",
-  },
-];
 
 function AboutIllustration() {
   return (
@@ -41,7 +24,7 @@ function AboutIllustration() {
         cx="248"
         cy="120"
         r="88"
-        stroke="#118ab2"
+        stroke="#0891b2"
         strokeOpacity="0.45"
         strokeWidth="2"
       />
@@ -54,7 +37,7 @@ function AboutIllustration() {
       />
       <path
         d="M200 96v48M176 120h48"
-        stroke="#118ab2"
+        stroke="#0891b2"
         strokeOpacity="0.6"
         strokeWidth="2"
         strokeLinecap="round"
@@ -107,29 +90,65 @@ export function AboutSection() {
             </FadeIn>
           </div>
 
-          <FadeIn delayMs={80} className="flex justify-center lg:justify-end">
-            <div className="pdl-dot-pattern rounded-2xl border border-pdl-border bg-pdl-highlight/40 p-8 shadow-lg shadow-pdl-accent/5 backdrop-blur-sm">
-              <AboutIllustration />
+          <FadeIn delayMs={80}>
+            <div className="flex gap-6 justify-center lg:justify-end">
+              <div className="animate-float">
+                <div className="rounded-xl overflow-hidden border-2 border-pdl-accent/30 shadow-lg w-32 h-40">
+                  <Image
+                    src="/founder-1.jpg"
+                    alt="Physician founder"
+                    width={128}
+                    height={160}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="animate-float" style={{ animationDelay: "0.2s" }}>
+                <div className="rounded-xl overflow-hidden border-2 border-pdl-accent-2/30 shadow-lg w-32 h-40">
+                  <Image
+                    src="/founder-2.jpg"
+                    alt="Engineer founder"
+                    width={128}
+                    height={160}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </FadeIn>
         </div>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-3">
-          {values.map((v, i) => (
-            <FadeIn key={v.title} delayMs={i * 70}>
-              <div className="h-full rounded-lg border border-pdl-border bg-pdl-highlight/30 p-5 shadow-lg shadow-pdl-accent/5 backdrop-blur-sm">
-                <p className="text-2xl" aria-hidden>
-                  {v.emoji}
-                </p>
-                <h3 className="font-heading mt-3 text-lg font-semibold text-pdl-text">
-                  {v.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-pdl-muted">
-                  {v.body}
-                </p>
-              </div>
-            </FadeIn>
-          ))}
+          <FadeIn>
+            <div className="h-full rounded-lg border border-pdl-border bg-pdl-highlight p-5 shadow-lg shadow-pdl-accent/5">
+              <h3 className="font-heading text-lg font-semibold text-pdl-text">
+                Built by Practitioners
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-pdl-muted">
+                We aren't consultants observing medicine from the outside. We practice it.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delayMs={70}>
+            <div className="h-full rounded-lg border border-pdl-border bg-pdl-highlight p-5 shadow-lg shadow-pdl-accent/5">
+              <h3 className="font-heading text-lg font-semibold text-pdl-text">
+                Privacy by Design
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-pdl-muted">
+                Data protection isn't paperwork. It's embedded in every architectural decision.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delayMs={140}>
+            <div className="h-full rounded-lg border border-pdl-border bg-pdl-highlight p-5 shadow-lg shadow-pdl-accent/5">
+              <h3 className="font-heading text-lg font-semibold text-pdl-text">
+                Engineering That Lasts
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-pdl-muted">
+                Software designed for longevity, not quarterly releases.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </div>
     </section>

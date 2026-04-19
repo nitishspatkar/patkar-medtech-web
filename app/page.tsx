@@ -1,4 +1,5 @@
 import { AboutSection } from "@/components/AboutSection";
+import { AIConsiderations } from "@/components/AIConsiderations";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
@@ -16,6 +17,7 @@ export default function Home() {
         <WhyDigitalize />
         <OurApproach />
         <Solutions />
+        <AIConsiderations />
         <AboutSection />
         <ContactSection />
       </main>

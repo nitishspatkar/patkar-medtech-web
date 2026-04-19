@@ -5,12 +5,12 @@ import { FadeIn } from "./FadeIn";
 
 const steps = [
   {
-    title: "Deep Requirements Engineering",
+    title: "Deep Inquiry",
     body:
-      "We learn your workflows, not impose solutions. We ask the questions that matter.",
+      "We learn your practice, not impose solutions. We ask the questions that matter.",
   },
   {
-    title: "Rapid Prototyping & Feedback",
+    title: "Rapid Build",
     body:
       "Working prototypes in weeks, not quarters. You steer development while changes are cheap.",
   },
@@ -20,7 +20,7 @@ const steps = [
       "Short cycles, incremental value. Visible iterations. Your feedback shapes the product.",
   },
   {
-    title: "Security by Architecture",
+    title: "Secure Foundation",
     body:
       "Privacy built in from day one. GDPR, nDSG, medical data obligations are our north star.",
   },
@@ -137,14 +137,12 @@ export function OurApproach() {
         </ol>
 
         <FadeIn className="mt-14">
-          <figure className="rounded-lg border border-pdl-accent/30 bg-pdl-highlight/50 p-6 shadow-lg shadow-pdl-accent/10 backdrop-blur-sm sm:p-8">
-            <blockquote className="text-lg font-medium leading-relaxed text-pdl-text sm:text-xl">
-              &ldquo;Prototyping costs have collapsed. This changes everything. You can finally do requirements engineering iteratively, collaboratively, with real stakes.&rdquo;
-            </blockquote>
-            <figcaption className="mt-4 text-sm font-medium text-pdl-accent">
-              — Patkar Digital Labs
-            </figcaption>
-          </figure>
+          <div className="relative rounded-lg bg-gradient-to-br from-pdl-accent/10 to-pdl-accent-2/5 p-8 border border-pdl-border shadow-lg shadow-pdl-accent/10 sm:p-10">
+            <div className="absolute -top-3 -left-3 w-6 h-6 rounded-full bg-pdl-accent/30 blur-sm" aria-hidden />
+            <p className="text-lg font-medium leading-relaxed text-pdl-text sm:text-xl">
+              Prototyping costs have collapsed. You can finally do requirements engineering iteratively, with real feedback and real stakes.
+            </p>
+          </div>
         </FadeIn>
       </div>
     </section>

@@ -94,11 +94,8 @@ function StatCard({
 }
 
 const benefits = [
-  "See more patients without burning out or extending hours",
-  "Reduce documentation time — focus on the work that matters",
-  "Eliminate preventable errors through intelligent workflows",
-  "Reclaim the essence of medicine: thinking, teaching, caring",
-  "Make decisions with real-time data, not guesswork",
+  "See patients without drowning in screens",
+  "Make decisions with real data, not guesswork",
 ];
 
 export function WhyDigitalize() {
