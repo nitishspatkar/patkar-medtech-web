@@ -97,17 +97,12 @@ export function AboutSection() {
           <div className="space-y-6 text-lg text-pdl-text">
             <FadeIn>
               <p>
-                Patkar Digital Labs exists because two perspectives collided in the same room: a practicing physician who&apos;s lived clinical workflows, and a computer scientist who builds systems at scale.
+                Founded when two perspectives collided: a practicing physician and a computer scientist. We speak the same language. We understand the frustrations.
               </p>
             </FadeIn>
             <FadeIn delayMs={60}>
               <p>
-                Most healthcare software is built by people who have never written a prescription. We are different. We are both the builder and the practitioner — speaking the same language, sharing the same frustrations.
-              </p>
-            </FadeIn>
-            <FadeIn delayMs={120}>
-              <p>
-                Supporting this core team is a network of specialist clinicians across multiple domains — from general practice to specialized surgery. When we engage on your project, we bring the exact clinical expertise your practice needs. Not generalists. Specialists.
+                Supporting us is a network of specialist clinicians across multiple domains. When we engage on your project, we bring the exact expertise your practice needs.
               </p>
             </FadeIn>
           </div>

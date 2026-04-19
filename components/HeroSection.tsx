@@ -27,13 +27,13 @@ export function HeroSection() {
 
         <FadeIn delayMs={80} className="mt-6">
           <p className="max-w-2xl text-lg text-pdl-muted sm:text-xl">
-            Digital tools built by clinicians for clinicians — not spreadsheet companies pretending to understand healthcare.
+            Software built by clinicians, not spreadsheet companies. Purpose-built for real clinical practice.
           </p>
         </FadeIn>
 
         <FadeIn delayMs={140} className="mt-8">
           <p className="max-w-3xl text-base text-pdl-text sm:text-lg leading-relaxed">
-            We are Patkar Digital Labs. Founded by a physician-engineer team, we build purpose-built software that fits the messy, beautiful complexity of real clinical practice. No generic compromises. No security theater. Just thoughtful, secure, and sustainable digital tools — engineered for medicine, not despite it.
+            We are Patkar Digital Labs — a physician-engineer team building secure, thoughtful digital tools designed for medicine.
           </p>
         </FadeIn>
 

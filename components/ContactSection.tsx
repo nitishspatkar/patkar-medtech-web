@@ -16,13 +16,13 @@ export function ContactSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-pdl-text sm:text-4xl">
-            Ready to rethink your workflows?
+            Let&apos;s discuss your challenge
           </h2>
         </FadeIn>
 
         <FadeIn delayMs={60} className="mt-6 max-w-3xl">
           <p className="text-lg text-pdl-muted">
-            You don&apos;t need a 50-page requirements document. Tell us your biggest friction point — we&apos;ll handle the rest.
+            No long briefs needed. Tell us your biggest friction point.
           </p>
         </FadeIn>
 
@@ -111,11 +111,11 @@ export function ContactSection() {
             <div className="rounded-lg border border-pdl-accent/30 bg-pdl-highlight/50 p-6 shadow-lg shadow-pdl-accent/10 backdrop-blur-sm sm:p-8">
               <div className="space-y-6 text-pdl-text">
                 <div>
-                  <p className="font-semibold">📍 Where we are</p>
-                  <p className="mt-1 text-sm text-pdl-muted">Switzerland-based. EU-wide service.</p>
+                  <p className="font-semibold">📍 Where</p>
+                  <p className="mt-1 text-sm text-pdl-muted">Switzerland-based. EU-wide.</p>
                 </div>
                 <div>
-                  <p className="font-semibold">📧 Direct contact</p>
+                  <p className="font-semibold">📧 Email</p>
                   <p className="mt-1">
                     <a
                       href="mailto:hello@patkardigitallabs.com"
@@ -125,14 +125,6 @@ export function ContactSection() {
                     </a>
                   </p>
                 </div>
-                <div>
-                  <p className="font-semibold">🗣️ Language</p>
-                  <p className="mt-1 text-sm text-pdl-muted">English. German support available upon request.</p>
-                </div>
-                <hr className="border-pdl-border" />
-                <p className="text-sm italic text-pdl-muted">
-                  Your message reaches our founding team directly — no gatekeepers, no form queues. Just a conversation.
-                </p>
               </div>
             </div>
           </FadeIn>

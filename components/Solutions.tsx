@@ -5,19 +5,19 @@ const projects = [
   {
     title: "Implant Infrastructure & Real-Time Monitoring",
     description:
-      "Connected medical devices that actually talk to physicians. End-to-end digital infrastructure for implants that enables real-time monitoring, clinical decision support, and frictionless data flows — without the regulatory theater.",
+      "Connected medical devices that talk to physicians. Real-time monitoring and clinical decision support without regulatory theater.",
     icon: Cpu,
   },
   {
-    title: "Medication Safety Engineered for Humans",
+    title: "Medication Safety for Humans",
     description:
-      "Elderly patients forget. Caregivers lose track. Pharmacists juggle interactions. Our system orchestrates it all — preventing missed doses, catching dangerous interactions, and reducing preventable hospitalizations through intelligent design.",
+      "Elderly patients forget. Caregivers lose track. Pharmacists juggle interactions. Our system prevents missed doses and dangerous interactions.",
     icon: Pill,
   },
   {
-    title: "Scheduling That Actually Works",
+    title: "Scheduling That Works",
     description:
-      "Staff rostering that doesn't require PhD-level Excel skills. Smart scheduling that respects clinical needs, staffing constraints, and labor law, all while freeing your lead clinicians from spreadsheet hell.",
+      "Smart scheduling that respects clinical needs, staffing constraints, and labor law. No spreadsheet hell.",
     icon: CalendarDays,
   },
 ];
@@ -31,13 +31,13 @@ export function Solutions() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-pdl-text sm:text-4xl">
-            What we've shipped. What&apos;s possible.
+            What we&apos;ve built. What&apos;s possible.
           </h2>
         </FadeIn>
 
         <FadeIn delayMs={60} className="mt-6 max-w-3xl">
           <p className="text-lg text-pdl-muted">
-            These aren't templates or SKUs. They're specific solutions we've built for specific problems in medicine. Every engagement is custom. But these show what's possible when engineering meets clinical expertise.
+            Specific solutions for specific problems. Custom for your practice.
           </p>
         </FadeIn>
 
@@ -62,13 +62,13 @@ export function Solutions() {
         <FadeIn delayMs={120} className="mt-12">
           <div className="rounded-lg border border-pdl-accent/30 bg-pdl-highlight/50 px-6 py-6 shadow-lg shadow-pdl-accent/10 backdrop-blur-sm sm:flex sm:items-center sm:justify-between sm:gap-6 sm:px-8">
             <p className="text-base text-pdl-text sm:max-w-2xl">
-              Your practice has unique workflows, constraints, and ambitions. We don&apos;t force you into generic software. We engineer solutions that fit the medicine you practice.
+              Your workflows are unique. We don&apos;t force generic software. We engineer solutions that fit your practice.
             </p>
             <a
               href="#contact"
               className="mt-4 inline-flex items-center gap-2 text-base font-semibold text-pdl-accent transition-all hover:gap-3 sm:mt-0 sm:shrink-0"
             >
-              Let&apos;s discuss your challenge
+              Let&apos;s talk
               <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
           </div>

@@ -113,7 +113,6 @@ export function WhyDigitalize() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-pdl-text sm:text-4xl">
-            Why physicians today are asking: <br/>
             <span className="bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent">
               "Where did all the time go?"
             </span>
@@ -122,7 +121,7 @@ export function WhyDigitalize() {
 
         <FadeIn delayMs={60} className="mt-6 max-w-3xl">
           <p className="text-lg text-pdl-muted">
-            You trained for years to diagnose and treat. But somewhere between medical school and today, the paperwork ate your practice. The numbers prove it — and they&apos;re stark.
+            Paperwork ate your practice. The data proves it — and it's stark.
           </p>
         </FadeIn>
 
@@ -156,10 +155,7 @@ export function WhyDigitalize() {
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
           <FadeIn>
             <p className="text-lg text-pdl-text leading-relaxed">
-              This isn&apos;t your fault. It&apos;s a systemic design failure. Systems built around billing cycles, not patients. Tools optimized for compliance, not care. The irony? Technology that was supposed to free you has enslaved you.
-            </p>
-            <p className="mt-6 text-lg text-pdl-text leading-relaxed">
-              But it doesn&apos;t have to be this way. When software is designed by people who actually practice medicine, everything changes.
+              This isn&apos;t your fault. It&apos;s a design failure. Systems optimized for billing, not patients. Technology that was supposed to free you has enslaved you.
             </p>
           </FadeIn>
 

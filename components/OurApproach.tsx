@@ -7,22 +7,22 @@ const steps = [
   {
     title: "Deep Requirements Engineering",
     body:
-      "We don't arrive with pre-built solutions. We start by learning your practice's actual workflows, constraints, and aspirations. This phase is where most projects fail and where we've learned it's the most valuable. We ask the questions that matter.",
+      "We learn your workflows, not impose solutions. We ask the questions that matter.",
   },
   {
-    title: "Rapid Prototyping & Feedback Cycles",
+    title: "Rapid Prototyping & Feedback",
     body:
-      "Instead of abstract specifications and lengthy approval cycles, you get working prototypes in weeks, not quarters. You interact with real systems. You steer development while changes are still cheap. This isn't just faster — it's fundamentally better.",
+      "Working prototypes in weeks, not quarters. You steer development while changes are cheap.",
   },
   {
-    title: "Continuous Delivery, Not Big Bangs",
+    title: "Continuous Delivery",
     body:
-      "We work in short cycles, delivering value incrementally. Every iteration is visible. Every decision is documented. You're never surprised. Your feedback shapes the product as it's being built, not after.",
+      "Short cycles, incremental value. Visible iterations. Your feedback shapes the product.",
   },
   {
-    title: "Security & Compliance as Architecture",
+    title: "Security by Architecture",
     body:
-      "Data privacy isn't a checkbox we tick at the end. It's woven into every decision from day one. GDPR, Swiss nDSG, and medical data obligations aren't obstacles — they're our north star. Security by design, not by policy.",
+      "Privacy built in from day one. GDPR, nDSG, medical data obligations are our north star.",
   },
 ];
 
@@ -54,13 +54,13 @@ export function OurApproach() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-pdl-text sm:text-4xl">
-            How we build software that physicians actually want to use
+            How we build software physicians want to use
           </h2>
         </FadeIn>
 
         <FadeIn delayMs={60} className="mt-6 max-w-3xl">
           <p className="text-lg text-pdl-muted">
-            Every practice is unique. Every workflow has evolved. We don't force you into our mold. We fit the tool to the medicine.
+            Every practice is unique. We fit the tool to the medicine.
           </p>
         </FadeIn>
 
@@ -139,7 +139,7 @@ export function OurApproach() {
         <FadeIn className="mt-14">
           <figure className="rounded-lg border border-pdl-accent/30 bg-pdl-highlight/50 p-6 shadow-lg shadow-pdl-accent/10 backdrop-blur-sm sm:p-8">
             <blockquote className="text-lg font-medium leading-relaxed text-pdl-text sm:text-xl">
-              &ldquo;The cost of prototyping has collapsed. This changes everything. You can finally do requirements engineering the right way — iteratively, collaboratively, with real stakes. Most teams waste this advantage. We use it.&rdquo;
+              &ldquo;Prototyping costs have collapsed. This changes everything. You can finally do requirements engineering iteratively, collaboratively, with real stakes.&rdquo;
             </blockquote>
             <figcaption className="mt-4 text-sm font-medium text-pdl-accent">
               — Patkar Digital Labs
