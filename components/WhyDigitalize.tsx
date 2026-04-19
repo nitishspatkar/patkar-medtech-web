@@ -66,26 +66,26 @@ function StatCard({
   let display: ReactNode;
   if (kind.type === "multiplier") {
     display = (
-      <span className="font-stat text-5xl font-semibold tabular-nums tracking-tight text-pdl-accent sm:text-6xl">
+      <span className="font-stat text-5xl font-semibold tabular-nums tracking-tight bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent sm:text-6xl">
         {n2}×
       </span>
     );
   } else if (kind.type === "percent") {
     display = (
-      <span className="font-stat text-5xl font-semibold tabular-nums tracking-tight text-pdl-accent sm:text-6xl">
+      <span className="font-stat text-5xl font-semibold tabular-nums tracking-tight bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent sm:text-6xl">
         {n49}%
       </span>
     );
   } else {
     display = (
-      <span className="font-stat text-5xl font-semibold tracking-tight text-pdl-accent sm:text-6xl">
+      <span className="font-stat text-5xl font-semibold tracking-tight bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent sm:text-6xl">
         ⅔
       </span>
     );
   }
 
   return (
-    <div className="flex h-full flex-col rounded-xl border border-pdl-border bg-pdl-bg p-6 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
+    <div className="flex h-full flex-col rounded-lg border border-pdl-border bg-pdl-highlight/30 p-6 shadow-lg shadow-pdl-accent/5 backdrop-blur-sm">
       <div className="mb-4">{display}</div>
       <p className="flex-1 text-base text-pdl-text">{label}</p>
       <p className="mt-4 text-xs text-pdl-muted">{source}</p>
@@ -94,11 +94,8 @@ function StatCard({
 }
 
 const benefits = [
-  "See more patients without extending your hours",
-  "Reduce documentation time with smarter workflows",
-  "Eliminate preventable scheduling and medication errors",
-  "Reclaim the joy of practising medicine",
-  "Make data-driven decisions with real-time insights",
+  "See patients without drowning in screens",
+  "Make decisions with real data, not guesswork",
 ];
 
 export function WhyDigitalize() {
@@ -113,55 +110,49 @@ export function WhyDigitalize() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-pdl-text sm:text-4xl">
-            You went into medicine to care for people.
+            <span className="bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent">
+              "Where did all the time go?"
+            </span>
           </h2>
         </FadeIn>
 
         <FadeIn delayMs={60} className="mt-6 max-w-3xl">
           <p className="text-lg text-pdl-muted">
-            But somewhere along the way, the paperwork took over. Research
-            consistently shows that physicians spend more time on administrative
-            tasks than they do with patients — and the costs are far greater than
-            just frustration.
+            Paperwork ate your practice. The data proves it — and it's stark.
           </p>
         </FadeIn>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <StatCard
             kind={{ type: "multiplier" }}
-            label="Physicians spend nearly twice as much time on administrative tasks as they do with patients."
+            label="Physicians spend nearly twice as long managing EHRs as they do talking to patients."
             source="Annals of Internal Medicine"
             animate={inView}
           />
           <StatCard
             kind={{ type: "percent" }}
-            label="of a physician's workday is spent in EHR systems — compared to only 27% in direct patient care."
-            source="Time-allocation study, EvidenceCare"
+            label="of a physician's workday is trapped in screens — not in rooms with patients."
+            source="EvidenceCare Time-Allocation Study"
             animate={inView}
           />
           <StatCard
             kind={{ type: "fraction" }}
-            label="of physicians say administrative duties negatively affect their ability to deliver high-quality care."
-            source="Massachusetts General Physicians Organization Survey"
+            label="of physicians report that admin burden directly harms their ability to deliver care."
+            source="Mass General Physicians Survey"
             animate={inView}
           />
         </div>
 
         <div
-          className="my-14 h-px w-full bg-pdl-border"
+          className="my-14 h-px w-full bg-gradient-to-r from-transparent via-pdl-border to-transparent"
           role="separator"
           aria-hidden
         />
 
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
           <FadeIn>
-            <p className="text-lg text-pdl-text">
-              This is not a personal failure. It is a systemic one. Scheduling
-              conflicts, manual documentation, medication tracking, and
-              disconnected data flows — these are problems that software can
-              solve. And solving them does not just save time. It recovers
-              energy. It reduces burnout. It lets you focus on what actually
-              demands your expertise.
+            <p className="text-lg text-pdl-text leading-relaxed">
+              This isn&apos;t your fault. It&apos;s a design failure. Systems optimized for billing, not patients. Technology that was supposed to free you has enslaved you.
             </p>
           </FadeIn>
 
@@ -169,7 +160,7 @@ export function WhyDigitalize() {
             <ul className="space-y-4">
               {benefits.map((item) => (
                 <li key={item} className="flex gap-3 text-pdl-text">
-                  <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-pdl-accent/10 text-pdl-accent">
+                  <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-pdl-accent/20 text-pdl-accent">
                     <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </span>
                   <span>{item}</span>
@@ -181,8 +172,7 @@ export function WhyDigitalize() {
 
         <FadeIn delayMs={120} className="mt-12">
           <p className="text-xl font-semibold text-pdl-accent sm:text-2xl">
-            Digitalization is not a disruption. It is the restoration of what
-            medicine should feel like.
+            Digitalization isn&apos;t transformation. It&apos;s restoration.
           </p>
         </FadeIn>
       </div>

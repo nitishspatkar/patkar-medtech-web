@@ -1,22 +1,5 @@
+import Image from "next/image";
 import { FadeIn } from "./FadeIn";
-
-const values = [
-  {
-    title: "Clinical Inside Out",
-    body: "We understand healthcare not as observers, but as practitioners.",
-    emoji: "🩺",
-  },
-  {
-    title: "Privacy as Architecture",
-    body: "Data protection is not an add-on. It is how we build.",
-    emoji: "🔐",
-  },
-  {
-    title: "Sustainable Digitalization",
-    body: "Technology that lasts, scales, and respects human values.",
-    emoji: "♻️",
-  },
-];
 
 function AboutIllustration() {
   return (
@@ -41,7 +24,7 @@ function AboutIllustration() {
         cx="248"
         cy="120"
         r="88"
-        stroke="#2E9E8F"
+        stroke="#0891b2"
         strokeOpacity="0.45"
         strokeWidth="2"
       />
@@ -54,7 +37,7 @@ function AboutIllustration() {
       />
       <path
         d="M200 96v48M176 120h48"
-        stroke="#2E9E8F"
+        stroke="#0891b2"
         strokeOpacity="0.6"
         strokeWidth="2"
         strokeLinecap="round"
@@ -89,7 +72,7 @@ export function AboutSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-pdl-text sm:text-4xl">
-            Who we are
+            The team behind the code
           </h2>
         </FadeIn>
 
@@ -97,54 +80,75 @@ export function AboutSection() {
           <div className="space-y-6 text-lg text-pdl-text">
             <FadeIn>
               <p>
-                Patkar Digital Labs was founded by two people who share a rare
-                combination of expertise: a practising physician who has
-                experienced clinical workflows firsthand, and a PhD computer
-                scientist with deep experience in software engineering, data
-                systems, and digital sustainability.
+                Founded when two perspectives collided: a practicing physician and a computer scientist. We speak the same language. We understand the frustrations.
               </p>
             </FadeIn>
             <FadeIn delayMs={60}>
               <p>
-                This is not a consultancy that visits medical practices and
-                translates for engineers. We are the physician and the engineer
-                — in the same room, speaking the same language.
-              </p>
-            </FadeIn>
-            <FadeIn delayMs={120}>
-              <p>
-                Around this founding pair, we work with an associate model: a
-                carefully selected network of specialist clinicians who join us on
-                a per-engagement basis, bringing domain expertise that matches
-                your specific environment — whether that is general practice,
-                surgical care, geriatrics, or beyond.
+                Supporting us is a network of specialist clinicians across multiple domains. When we engage on your project, we bring the exact expertise your practice needs.
               </p>
             </FadeIn>
           </div>
 
-          <FadeIn delayMs={80} className="flex justify-center lg:justify-end">
-            <div className="pdl-dot-pattern rounded-2xl border border-pdl-border bg-pdl-bg p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
-              <AboutIllustration />
+          <FadeIn delayMs={80}>
+            <div className="flex gap-6 justify-center lg:justify-end">
+              <div className="animate-float">
+                <div className="rounded-xl overflow-hidden border-2 border-pdl-accent/30 shadow-lg w-32 h-40">
+                  <Image
+                    src="/founder-1.jpg"
+                    alt="Physician founder"
+                    width={128}
+                    height={160}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="animate-float" style={{ animationDelay: "0.2s" }}>
+                <div className="rounded-xl overflow-hidden border-2 border-pdl-accent-2/30 shadow-lg w-32 h-40">
+                  <Image
+                    src="/founder-2.jpg"
+                    alt="Engineer founder"
+                    width={128}
+                    height={160}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </FadeIn>
         </div>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-3">
-          {values.map((v, i) => (
-            <FadeIn key={v.title} delayMs={i * 70}>
-              <div className="h-full rounded-xl border border-pdl-border bg-pdl-bg p-5 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
-                <p className="text-2xl" aria-hidden>
-                  {v.emoji}
-                </p>
-                <h3 className="font-heading mt-3 text-lg font-semibold text-pdl-text">
-                  {v.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-pdl-muted">
-                  {v.body}
-                </p>
-              </div>
-            </FadeIn>
-          ))}
+          <FadeIn>
+            <div className="h-full rounded-lg border border-pdl-border bg-pdl-highlight p-5 shadow-lg shadow-pdl-accent/5">
+              <h3 className="font-heading text-lg font-semibold text-pdl-text">
+                Built by Practitioners
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-pdl-muted">
+                We aren't consultants observing medicine from the outside. We practice it.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delayMs={70}>
+            <div className="h-full rounded-lg border border-pdl-border bg-pdl-highlight p-5 shadow-lg shadow-pdl-accent/5">
+              <h3 className="font-heading text-lg font-semibold text-pdl-text">
+                Privacy by Design
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-pdl-muted">
+                Data protection isn't paperwork. It's embedded in every architectural decision.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delayMs={140}>
+            <div className="h-full rounded-lg border border-pdl-border bg-pdl-highlight p-5 shadow-lg shadow-pdl-accent/5">
+              <h3 className="font-heading text-lg font-semibold text-pdl-text">
+                Engineering That Lasts
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-pdl-muted">
+                Software designed for longevity, not quarterly releases.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </div>
     </section>
