@@ -2,19 +2,19 @@ import { FadeIn } from "./FadeIn";
 
 const values = [
   {
-    title: "Clinical Inside Out",
-    body: "We understand healthcare not as observers, but as practitioners.",
+    title: "Built by Practitioners",
+    body: "We aren't consultants observing medicine from the outside. We practice it.",
     emoji: "🩺",
   },
   {
-    title: "Privacy as Architecture",
-    body: "Data protection is not an add-on. It is how we build.",
+    title: "Privacy by Design",
+    body: "Data protection isn't paperwork. It's embedded in every architectural decision.",
     emoji: "🔐",
   },
   {
-    title: "Sustainable Digitalization",
-    body: "Technology that lasts, scales, and respects human values.",
-    emoji: "♻️",
+    title: "Engineering That Lasts",
+    body: "Software designed for longevity, not quarterly releases.",
+    emoji: "⚙️",
   },
 ];
 
@@ -41,7 +41,7 @@ function AboutIllustration() {
         cx="248"
         cy="120"
         r="88"
-        stroke="#2E9E8F"
+        stroke="#118ab2"
         strokeOpacity="0.45"
         strokeWidth="2"
       />
@@ -54,7 +54,7 @@ function AboutIllustration() {
       />
       <path
         d="M200 96v48M176 120h48"
-        stroke="#2E9E8F"
+        stroke="#118ab2"
         strokeOpacity="0.6"
         strokeWidth="2"
         strokeLinecap="round"
@@ -89,7 +89,7 @@ export function AboutSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-pdl-text sm:text-4xl">
-            Who we are
+            The team behind the code
           </h2>
         </FadeIn>
 
@@ -97,33 +97,23 @@ export function AboutSection() {
           <div className="space-y-6 text-lg text-pdl-text">
             <FadeIn>
               <p>
-                Patkar Digital Labs was founded by two people who share a rare
-                combination of expertise: a practising physician who has
-                experienced clinical workflows firsthand, and a PhD computer
-                scientist with deep experience in software engineering, data
-                systems, and digital sustainability.
+                Patkar Digital Labs exists because two perspectives collided in the same room: a practicing physician who&apos;s lived clinical workflows, and a computer scientist who builds systems at scale.
               </p>
             </FadeIn>
             <FadeIn delayMs={60}>
               <p>
-                This is not a consultancy that visits medical practices and
-                translates for engineers. We are the physician and the engineer
-                — in the same room, speaking the same language.
+                Most healthcare software is built by people who have never written a prescription. We are different. We are both the builder and the practitioner — speaking the same language, sharing the same frustrations.
               </p>
             </FadeIn>
             <FadeIn delayMs={120}>
               <p>
-                Around this founding pair, we work with an associate model: a
-                carefully selected network of specialist clinicians who join us on
-                a per-engagement basis, bringing domain expertise that matches
-                your specific environment — whether that is general practice,
-                surgical care, geriatrics, or beyond.
+                Supporting this core team is a network of specialist clinicians across multiple domains — from general practice to specialized surgery. When we engage on your project, we bring the exact clinical expertise your practice needs. Not generalists. Specialists.
               </p>
             </FadeIn>
           </div>
 
           <FadeIn delayMs={80} className="flex justify-center lg:justify-end">
-            <div className="pdl-dot-pattern rounded-2xl border border-pdl-border bg-pdl-bg p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
+            <div className="pdl-dot-pattern rounded-2xl border border-pdl-border bg-pdl-highlight/40 p-8 shadow-lg shadow-pdl-accent/5 backdrop-blur-sm">
               <AboutIllustration />
             </div>
           </FadeIn>
@@ -132,7 +122,7 @@ export function AboutSection() {
         <div className="mt-14 grid gap-6 sm:grid-cols-3">
           {values.map((v, i) => (
             <FadeIn key={v.title} delayMs={i * 70}>
-              <div className="h-full rounded-xl border border-pdl-border bg-pdl-bg p-5 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
+              <div className="h-full rounded-lg border border-pdl-border bg-pdl-highlight/30 p-5 shadow-lg shadow-pdl-accent/5 backdrop-blur-sm">
                 <p className="text-2xl" aria-hidden>
                   {v.emoji}
                 </p>

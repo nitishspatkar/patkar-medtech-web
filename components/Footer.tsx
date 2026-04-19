@@ -17,10 +17,10 @@ function LinkedInGlyph({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="border-t-4 border-pdl-accent bg-pdl-bg">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+    <footer className="border-t border-pdl-border bg-pdl-section">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
-          <a href="#top" className="flex items-center gap-2.5 no-underline">
+          <a href="#top" className="flex items-center gap-2.5 no-underline transition-opacity hover:opacity-80">
             <LogoMark className="h-8 w-8 shrink-0" />
             <span className="font-heading text-lg font-semibold tracking-tight text-pdl-text">
               Patkar Digital Labs

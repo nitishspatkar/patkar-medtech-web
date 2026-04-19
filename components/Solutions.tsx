@@ -3,21 +3,21 @@ import { FadeIn } from "./FadeIn";
 
 const projects = [
   {
-    title: "Digital Infrastructure for Medical Implants",
+    title: "Implant Infrastructure & Real-Time Monitoring",
     description:
-      "End-to-end digital interfaces and infrastructure for connected medical implants — enabling real-time monitoring, data logging, and clinical decision support.",
+      "Connected medical devices that actually talk to physicians. End-to-end digital infrastructure for implants that enables real-time monitoring, clinical decision support, and frictionless data flows — without the regulatory theater.",
     icon: Cpu,
   },
   {
-    title: "Medication Assistant for Elderly Patients",
+    title: "Medication Safety Engineered for Humans",
     description:
-      "An intelligent medication management system designed for elderly patients and their caregivers — reducing missed doses, adverse interactions, and hospital readmissions.",
+      "Elderly patients forget. Caregivers lose track. Pharmacists juggle interactions. Our system orchestrates it all — preventing missed doses, catching dangerous interactions, and reducing preventable hospitalizations through intelligent design.",
     icon: Pill,
   },
   {
-    title: "Roster & Scheduling Optimisation",
+    title: "Scheduling That Actually Works",
     description:
-      "Smart scheduling systems that eliminate the coordination overhead of staff rostering — freeing clinical leads to focus on patient outcomes, not spreadsheets.",
+      "Staff rostering that doesn't require PhD-level Excel skills. Smart scheduling that respects clinical needs, staffing constraints, and labor law, all while freeing your lead clinicians from spreadsheet hell.",
     icon: CalendarDays,
   },
 ];
@@ -31,23 +31,21 @@ export function Solutions() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-pdl-text sm:text-4xl">
-            What we build
+            What we've shipped. What&apos;s possible.
           </h2>
         </FadeIn>
 
         <FadeIn delayMs={60} className="mt-6 max-w-3xl">
           <p className="text-lg text-pdl-muted">
-            We have delivered projects across clinical infrastructure, patient
-            safety, and operational efficiency. Every engagement is custom — but
-            here are examples of what is possible.
+            These aren't templates or SKUs. They're specific solutions we've built for specific problems in medicine. Every engagement is custom. But these show what's possible when engineering meets clinical expertise.
           </p>
         </FadeIn>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {projects.map(({ title, description, icon: Icon }, i) => (
             <FadeIn key={title} delayMs={i * 80}>
-              <article className="flex h-full flex-col rounded-xl border border-pdl-border bg-pdl-bg p-6 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-pdl-accent/10 text-pdl-accent">
+              <article className="flex h-full flex-col rounded-lg border border-pdl-border bg-pdl-highlight/30 p-6 shadow-lg shadow-pdl-accent/5 backdrop-blur-sm">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-pdl-accent/20 text-pdl-accent">
                   <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-pdl-text">
@@ -62,16 +60,15 @@ export function Solutions() {
         </div>
 
         <FadeIn delayMs={120} className="mt-12">
-          <div className="rounded-xl border border-pdl-border bg-pdl-section px-6 py-6 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:px-8">
+          <div className="rounded-lg border border-pdl-accent/30 bg-pdl-highlight/50 px-6 py-6 shadow-lg shadow-pdl-accent/10 backdrop-blur-sm sm:flex sm:items-center sm:justify-between sm:gap-6 sm:px-8">
             <p className="text-base text-pdl-text sm:max-w-2xl">
-              Every solution we build is tailored to your practice&apos;s
-              specific context, size, and technical environment.
+              Your practice has unique workflows, constraints, and ambitions. We don&apos;t force you into generic software. We engineer solutions that fit the medicine you practice.
             </p>
             <a
               href="#contact"
-              className="mt-4 inline-flex items-center gap-2 text-base font-semibold text-pdl-accent sm:mt-0 sm:shrink-0"
+              className="mt-4 inline-flex items-center gap-2 text-base font-semibold text-pdl-accent transition-all hover:gap-3 sm:mt-0 sm:shrink-0"
             >
-              Talk to us about your challenge
+              Let&apos;s discuss your challenge
               <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
           </div>

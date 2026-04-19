@@ -5,13 +5,14 @@
   --font-heading: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-stat: var(--font-dm-mono), ui-monospace, monospace;
 
-  --color-pdl-bg: #ffffff;
-  --color-pdl-section: #f4f7f9;
-  --color-pdl-accent: #1a5f7a;
-  --color-pdl-accent-2: #2e9e8f;
-  --color-pdl-text: #1a2b3c;
-  --color-pdl-muted: #5a6a78;
-  --color-pdl-border: #dde4ea;
+  --color-pdl-bg: #0f1419;
+  --color-pdl-section: #131922;
+  --color-pdl-accent: #06d6a0;
+  --color-pdl-accent-2: #118ab2;
+  --color-pdl-text: #ecf0f1;
+  --color-pdl-muted: #b0b8c1;
+  --color-pdl-border: #1e272f;
+  --color-pdl-highlight: #073b4c;
 }
 
 html {
@@ -26,12 +27,24 @@ body {
   line-height: 1.7;
 }
 
-/* Subtle dot grid for section backgrounds */
+/* Animated gradient dot grid */
 .pdl-dot-pattern {
   background-image: radial-gradient(
     circle at 1px 1px,
-    rgba(26, 95, 122, 0.08) 1px,
+    rgba(6, 214, 160, 0.12) 1px,
     transparent 0
   );
   background-size: 24px 24px;
+}
+
+/* Gradient accents for visual interest */
+.gradient-accent {
+  background: linear-gradient(135deg, rgba(6, 214, 160, 0.2), rgba(17, 138, 178, 0.1));
+}
+
+/* Premium card glass effect */
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(6, 214, 160, 0.1);
 }

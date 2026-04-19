@@ -6,7 +6,7 @@ import { LogoMark } from "./LogoMark";
 
 const navLinks = [
   { href: "#why-digitalize", label: "Why Digitalize" },
-  { href: "#our-approach", label: "Our Approach" },
+  { href: "#our-approach", label: "How We Work" },
   { href: "#solutions", label: "Solutions" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
@@ -33,16 +33,16 @@ export function NavBar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-shadow duration-300 ${
+      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "border-pdl-border bg-pdl-bg shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
-          : "border-transparent bg-pdl-bg/90 backdrop-blur-sm"
+          ? "border-pdl-border bg-pdl-bg/95 shadow-lg shadow-pdl-accent/5 backdrop-blur-md"
+          : "border-pdl-border/50 bg-pdl-bg/80 backdrop-blur-sm"
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <a
           href="#top"
-          className="group flex items-center gap-2.5 text-pdl-text no-underline"
+          className="group flex items-center gap-2.5 text-pdl-text no-underline transition-opacity hover:opacity-80"
         >
           <LogoMark className="h-8 w-8 shrink-0" />
           <span className="font-heading text-lg font-semibold tracking-tight">
@@ -58,14 +58,14 @@ export function NavBar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-pdl-text/90 transition-colors hover:text-pdl-accent"
+              className="text-sm font-medium text-pdl-muted transition-colors hover:text-pdl-accent"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="rounded-lg border-2 border-pdl-accent px-4 py-2 text-sm font-semibold text-pdl-accent transition-colors hover:bg-pdl-accent hover:text-white"
+            className="rounded-lg bg-gradient-to-r from-pdl-accent to-pdl-accent-2 px-5 py-2 text-sm font-semibold text-pdl-bg shadow-lg shadow-pdl-accent/20 transition-all hover:shadow-xl hover:shadow-pdl-accent/30"
           >
             Get in Touch
           </a>
@@ -73,7 +73,7 @@ export function NavBar() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg p-2 text-pdl-text md:hidden"
+          className="inline-flex items-center justify-center rounded-lg p-2 text-pdl-text transition-colors hover:text-pdl-accent md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -85,7 +85,7 @@ export function NavBar() {
 
       <div
         id="mobile-nav"
-        className={`border-t border-pdl-border bg-pdl-bg md:hidden ${
+        className={`border-t border-pdl-border/50 bg-pdl-bg md:hidden ${
           open ? "block" : "hidden"
         }`}
       >
@@ -94,7 +94,7 @@ export function NavBar() {
             <a
               key={link.href}
               href={link.href}
-              className="rounded-lg px-3 py-3 text-base font-medium text-pdl-text hover:bg-pdl-section"
+              className="rounded-lg px-3 py-3 text-base font-medium text-pdl-muted transition-colors hover:bg-pdl-highlight/50 hover:text-pdl-accent"
               onClick={() => setOpen(false)}
             >
               {link.label}
@@ -102,7 +102,7 @@ export function NavBar() {
           ))}
           <a
             href="#contact"
-            className="mt-2 rounded-lg border-2 border-pdl-accent px-4 py-3 text-center text-sm font-semibold text-pdl-accent"
+            className="mt-2 rounded-lg bg-gradient-to-r from-pdl-accent to-pdl-accent-2 px-4 py-3 text-center text-sm font-semibold text-pdl-bg shadow-lg shadow-pdl-accent/20"
             onClick={() => setOpen(false)}
           >
             Get in Touch
