@@ -1,11 +1,5 @@
 import { FadeIn } from "./FadeIn";
 
-const trustItems = [
-  "🇨🇭 Switzerland-based. EU-ready.",
-  "🔒 Privacy by Architecture, Not Compliance",
-  "🔬 Clinicians & Engineers. Together.",
-];
-
 export function HeroSection() {
   return (
     <section
@@ -57,20 +51,6 @@ export function HeroSection() {
             Explore Our Solutions
           </a>
         </FadeIn>
-      </div>
-
-      <div className="relative border-t border-pdl-border bg-pdl-highlight/20 backdrop-blur-sm">
-        <div className="mx-auto grid max-w-6xl gap-5 px-4 py-8 sm:grid-cols-3 sm:gap-8 sm:px-6 lg:px-8">
-          {trustItems.map((label) => (
-            <p
-              key={label}
-              className="flex items-center gap-2 text-sm leading-snug text-pdl-muted sm:text-[0.9375rem]"
-            >
-              <span className="sr-only">Trust signal: </span>
-              {label}
-            </p>
-          ))}
-        </div>
       </div>
     </section>
   );
