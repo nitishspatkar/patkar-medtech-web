@@ -1,67 +1,4 @@
-import Image from "next/image";
 import { FadeIn } from "./FadeIn";
-
-function AboutIllustration() {
-  return (
-    <svg
-      className="h-auto w-full max-w-md text-pdl-accent"
-      viewBox="0 0 400 320"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden
-    >
-      <rect
-        x="48"
-        y="64"
-        width="200"
-        height="200"
-        rx="24"
-        stroke="currentColor"
-        strokeOpacity="0.35"
-        strokeWidth="2"
-      />
-      <circle
-        cx="248"
-        cy="120"
-        r="88"
-        stroke="#0891b2"
-        strokeOpacity="0.45"
-        strokeWidth="2"
-      />
-      <path
-        d="M120 200c32-48 72-72 120-72"
-        stroke="currentColor"
-        strokeOpacity="0.5"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M200 96v48M176 120h48"
-        stroke="#0891b2"
-        strokeOpacity="0.6"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <rect
-        x="232"
-        y="200"
-        width="120"
-        height="72"
-        rx="8"
-        stroke="currentColor"
-        strokeOpacity="0.25"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M248 216h80M248 232h56M248 248h72"
-        stroke="currentColor"
-        strokeOpacity="0.2"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
 
 export function AboutSection() {
   return (
@@ -93,26 +30,16 @@ export function AboutSection() {
           <FadeIn delayMs={80}>
             <div className="flex gap-6 justify-center lg:justify-end">
               <div className="animate-float">
-                <div className="rounded-xl overflow-hidden border-2 border-pdl-accent/30 shadow-lg w-32 h-40">
-                  <Image
-                    src="/founder-1.jpg"
-                    alt="Physician founder"
-                    width={128}
-                    height={160}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="rounded-xl overflow-hidden border-2 border-pdl-accent/30 shadow-lg w-32 h-40 bg-gradient-to-br from-pdl-accent/20 to-pdl-accent-2/20 flex items-center justify-center">
+                  <span className="text-4xl">👨‍⚕️</span>
                 </div>
+                <p className="mt-2 text-sm text-center text-pdl-muted font-medium">Physician</p>
               </div>
               <div className="animate-float" style={{ animationDelay: "0.2s" }}>
-                <div className="rounded-xl overflow-hidden border-2 border-pdl-accent-2/30 shadow-lg w-32 h-40">
-                  <Image
-                    src="/founder-2.jpg"
-                    alt="Engineer founder"
-                    width={128}
-                    height={160}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="rounded-xl overflow-hidden border-2 border-pdl-accent-2/30 shadow-lg w-32 h-40 bg-gradient-to-br from-pdl-accent-2/20 to-pdl-accent/20 flex items-center justify-center">
+                  <span className="text-4xl">💻</span>
                 </div>
+                <p className="mt-2 text-sm text-center text-pdl-muted font-medium">Engineer</p>
               </div>
             </div>
           </FadeIn>
