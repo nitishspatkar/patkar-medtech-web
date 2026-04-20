@@ -7,8 +7,6 @@ export function HeroSection() {
       className="relative bg-cream px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="eyebrow">Medical Digitalization — Switzerland & EU</div>
-
         <h1 className="heading-display mb-8 max-w-4xl">
           BETTER TOOLS.<br />
           BETTER MEDICINE.
