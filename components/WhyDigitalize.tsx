@@ -1,180 +1,100 @@
 "use client";
 
-import { Check } from "lucide-react";
-import { type ReactNode, useEffect, useRef, useState } from "react";
-import { FadeIn } from "./FadeIn";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-function useInViewOnce() {
-  const ref = useRef<HTMLElement | null>(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) setInView(true);
-      },
-      { threshold: 0.2 },
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  return { ref, inView };
-}
-
-function useCountUp(end: number, enabled: boolean, durationMs = 1400) {
-  const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    if (!enabled) return;
-
-    let frame: number;
-    const t0 = performance.now();
-    const ease = (t: number) => 1 - (1 - t) ** 3;
-
-    const tick = (now: number) => {
-      const u = Math.min((now - t0) / durationMs, 1);
-      setValue(Math.round(end * ease(u)));
-      if (u < 1) frame = requestAnimationFrame(tick);
-    };
-
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [enabled, end, durationMs]);
-
-  return value;
-}
-
-function StatCard({
-  kind,
-  label,
-  source,
-  animate,
-}: {
-  kind: { type: "multiplier" } | { type: "percent" } | { type: "fraction" };
-  label: string;
-  source: string;
-  animate: boolean;
-}) {
-  const n2 = useCountUp(2, animate && kind.type === "multiplier");
-  const n49 = useCountUp(49, animate && kind.type === "percent");
-
-  let display: ReactNode;
-  if (kind.type === "multiplier") {
-    display = (
-      <span className="font-stat text-5xl font-semibold tabular-nums tracking-tight bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent sm:text-6xl">
-        {n2}×
-      </span>
-    );
-  } else if (kind.type === "percent") {
-    display = (
-      <span className="font-stat text-5xl font-semibold tabular-nums tracking-tight bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent sm:text-6xl">
-        {n49}%
-      </span>
-    );
-  } else {
-    display = (
-      <span className="font-stat text-5xl font-semibold tracking-tight bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent sm:text-6xl">
-        ⅔
-      </span>
-    );
-  }
-
-  return (
-    <div className="flex h-full flex-col rounded-lg border border-pdl-border bg-pdl-highlight/30 p-6 shadow-lg shadow-pdl-accent/5 backdrop-blur-sm">
-      <div className="mb-4">{display}</div>
-      <p className="flex-1 text-base text-pdl-text">{label}</p>
-      <p className="mt-4 text-xs text-pdl-muted">{source}</p>
-    </div>
-  );
-}
-
-const benefits = [
-  "See patients without drowning in screens",
-  "Make decisions with real data, not guesswork",
-];
+gsap.registerPlugin(ScrollTrigger);
 
 export function WhyDigitalize() {
-  const { ref, inView } = useInViewOnce();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const benefitRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    benefitRefs.current.forEach((el, i) => {
+      if (!el) return;
+      gsap.fromTo(
+        el,
+        { opacity: 0, x: -30 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          delay: i * 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 70%",
+            once: true,
+          },
+        }
+      );
+    });
+  }, []);
+
+  const benefits = [
+    "See more patients without longer hours",
+    "Cut documentation time with smarter workflows",
+    "Eliminate preventable scheduling errors",
+    "Reduce medication mistakes automatically",
+    "Make decisions backed by real-time data",
+  ];
 
   return (
     <section
       id="why-digitalize"
-      ref={ref}
-      className="border-b border-pdl-border bg-pdl-bg py-16 sm:py-20 lg:py-24"
+      ref={containerRef}
+      className="relative bg-burgundy px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48 text-cream"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <FadeIn>
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-pdl-text sm:text-4xl">
-            <span className="bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent">
-              "Where did all the time go?"
-            </span>
-          </h2>
-        </FadeIn>
+      <div className="mx-auto max-w-6xl">
+        <div className="eyebrow text-cream/60">The Problem</div>
 
-        <FadeIn delayMs={60} className="mt-6 max-w-3xl">
-          <p className="text-lg text-pdl-muted">
-            Paperwork ate your practice. The data proves it — and it's stark.
-          </p>
-        </FadeIn>
+        <h2 className="heading-display mb-8 max-w-3xl">
+          YOU WENT INTO<br />
+          MEDICINE TO CARE<br />
+          FOR PEOPLE.
+        </h2>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <StatCard
-            kind={{ type: "multiplier" }}
-            label="Physicians spend nearly twice as long managing EHRs as they do talking to patients."
-            source="Annals of Internal Medicine"
-            animate={inView}
-          />
-          <StatCard
-            kind={{ type: "percent" }}
-            label="of a physician's workday is trapped in screens — not in rooms with patients."
-            source="EvidenceCare Time-Allocation Study"
-            animate={inView}
-          />
-          <StatCard
-            kind={{ type: "fraction" }}
-            label="of physicians report that admin burden directly harms their ability to deliver care."
-            source="Mass General Physicians Survey"
-            animate={inView}
-          />
-        </div>
-
-        <div
-          className="my-14 h-px w-full bg-gradient-to-r from-transparent via-pdl-border to-transparent"
-          role="separator"
-          aria-hidden
-        />
-
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
-          <FadeIn>
-            <p className="text-lg text-pdl-text leading-relaxed">
-              This isn&apos;t your fault. It&apos;s a design failure. Systems optimized for billing, not patients. Technology that was supposed to free you has enslaved you.
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="max-w-2xl">
+            <p className="mb-6 text-lg leading-relaxed">
+              But somewhere along the way, the paperwork took over. Administrative
+              overload, scheduling friction, disconnected data, medication tracking
+              — these are not inevitable parts of practice. They are solvable problems.
             </p>
-          </FadeIn>
+            <p className="text-lg leading-relaxed">
+              And the cost is not just frustration. It is burnout. Missed diagnoses.
+              Rushed consultations. Energy spent on the wrong things.
+            </p>
+          </div>
 
-          <FadeIn delayMs={80}>
-            <ul className="space-y-4">
-              {benefits.map((item) => (
-                <li key={item} className="flex gap-3 text-pdl-text">
-                  <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-pdl-accent/20 text-pdl-accent">
-                    <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </FadeIn>
+          <div className="space-y-4">
+            {benefits.map((benefit, i) => (
+              <div
+                key={i}
+                ref={(el) => {
+                  benefitRefs.current[i] = el;
+                }}
+                className="flex gap-4 items-start pb-4 border-b border-cream/20 last:border-0"
+              >
+                <div className="font-display text-2xl font-bold shrink-0 text-cream/60">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <p className="text-base leading-relaxed pt-1">{benefit}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <FadeIn delayMs={120} className="mt-12">
-          <p className="text-xl font-semibold text-pdl-accent sm:text-2xl">
-            Digitalization isn&apos;t transformation. It&apos;s restoration.
+        <div className="mt-12 border-t border-cream/20 pt-12">
+          <p className="text-2xl font-bold leading-tight">
+            Digitalization is not a disruption.<br />
+            It is the restoration of what<br />
+            medicine should feel like.
           </p>
-        </FadeIn>
+        </div>
       </div>
     </section>
   );

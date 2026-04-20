@@ -1,24 +1,18 @@
 import type { Metadata } from "next";
-import { DM_Mono, DM_Sans, Inter } from "next/font/google";
+import { Bebas_Neue, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: "400",
+  variable: "--font-display",
   display: "swap",
 });
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-dm-sans",
-  display: "swap",
-});
-
-const dmMono = DM_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-dm-mono",
+  variable: "--font-body",
   display: "swap",
 });
 
@@ -36,9 +30,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${dmSans.variable} ${dmMono.variable} h-full scroll-smooth antialiased`}
+      className={`${bebasNeue.variable} ${dmSans.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full bg-pdl-bg font-sans text-base leading-[1.7] text-pdl-text">
+      <body className="min-h-full bg-cream font-body text-base leading-relaxed text-dark">
         {children}
       </body>
     </html>

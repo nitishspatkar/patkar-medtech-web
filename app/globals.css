@@ -1,97 +1,68 @@
 @import "tailwindcss";
 
-@theme inline {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-stat: var(--font-dm-mono), ui-monospace, monospace;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
 
-  --color-pdl-bg: #f8fafb;
-  --color-pdl-section: #f3f5f7;
-  --color-pdl-accent: #06d6a0;
-  --color-pdl-accent-2: #0891b2;
-  --color-pdl-text: #0f172a;
-  --color-pdl-muted: #64748b;
-  --color-pdl-border: #e2e8f0;
-  --color-pdl-highlight: #f1f5f9;
+@theme inline {
+  --font-display: "Bebas Neue", ui-sans-serif;
+  --font-body: "DM Sans", ui-sans-serif;
+  
+  --color-cream: #F2EDE4;
+  --color-burgundy: #2C0B0B;
+  --color-dark: #0D0D0D;
+  --color-muted: #6B6056;
 }
 
 html {
+  background: var(--color-cream);
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--color-pdl-bg);
-  color: var(--color-pdl-text);
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  line-height: 1.7;
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background: var(--color-cream);
 }
 
-/* Animated gradient dot grid */
-.pdl-dot-pattern {
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    rgba(6, 214, 160, 0.08) 1px,
-    transparent 0
-  );
-  background-size: 24px 24px;
+/* Display headings */
+.heading-display {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
-/* Gradient accents for visual interest */
-.gradient-accent {
-  background: linear-gradient(135deg, rgba(6, 214, 160, 0.1), rgba(8, 145, 178, 0.08));
+/* Eyebrow labels */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
 }
 
-/* Premium card glass effect */
-.card-glass {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(6, 214, 160, 0.1);
+/* Horizontal divider */
+.divider {
+  height: 1px;
+  background: var(--color-muted);
+  opacity: 0.3;
 }
 
-/* Floating animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+/* Accordion smooth transitions */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
 }
 
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+.accordion-content.closed {
+  max-height: 0;
+  opacity: 0;
 }
 
-/* Shimmer animation */
-@keyframes shimmer {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.6;
-  }
-}
-
-.animate-shimmer {
-  animation: shimmer 3s ease-in-out infinite;
-}
-
-/* Slide up animation */
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-slide-up {
-  animation: slideUp 0.6s ease-out;
+.accordion-content.open {
+  max-height: 1000px;
+  opacity: 1;
 }
