@@ -1,6 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
   {
@@ -31,6 +35,74 @@ const steps = [
 
 export function OurApproach() {
   const [openIndex, setOpenIndex] = useState(0);
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const prefersReducedMotion = useRef(false);
+
+  useEffect(() => {
+    prefersReducedMotion.current = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion.current) return;
+
+    // Animate step rows on scroll
+    const visibleSteps = stepRefs.current.filter(Boolean);
+    if (visibleSteps.length > 0) {
+      gsap.from(visibleSteps, {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: visibleSteps[0],
+          start: "top 75%",
+        },
+      });
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
+  const animateContentOpen = (index: number) => {
+    const content = contentRefs.current[index];
+    if (!content || prefersReducedMotion.current) return;
+
+    gsap.to(content, {
+      height: "auto",
+      opacity: 1,
+      duration: 0.4,
+      ease: "power2.out",
+    });
+  };
+
+  const animateContentClose = (index: number) => {
+    const content = contentRefs.current[index];
+    if (!content || prefersReducedMotion.current) return;
+
+    gsap.to(content, {
+      height: 0,
+      opacity: 0,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+  };
+
+  const handleAccordionClick = (index: number) => {
+    if (openIndex === index) {
+      animateContentClose(index);
+      setOpenIndex(-1);
+    } else {
+      if (openIndex >= 0) {
+        animateContentClose(openIndex);
+      }
+      setOpenIndex(index);
+      animateContentOpen(index);
+    }
+  };
 
   return (
     <section
@@ -53,11 +125,12 @@ export function OurApproach() {
           {steps.map((step, i) => (
             <div
               key={i}
+              ref={(el) => (stepRefs.current[i] = el)}
               className="border-b border-dark/20 py-6 sm:py-8"
             >
               <button
                 type="button"
-                onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
+                onClick={() => handleAccordionClick(i)}
                 className="w-full flex items-start justify-between gap-4 text-left transition-opacity hover:opacity-70"
                 aria-expanded={openIndex === i}
                 aria-controls={`step-${i}`}
@@ -75,13 +148,22 @@ export function OurApproach() {
                 </span>
               </button>
 
-              {openIndex === i && (
-                <div id={`step-${i}`} className="mt-6 ml-12 max-w-3xl">
+              <div
+                ref={(el) => (contentRefs.current[i] = el)}
+                id={`step-${i}`}
+                style={{
+                  height: openIndex === i ? "auto" : 0,
+                  opacity: openIndex === i ? 1 : 0,
+                  overflow: "hidden",
+                }}
+                className="transition-all"
+              >
+                <div className="mt-6 ml-12 max-w-3xl">
                   <p className="text-base leading-relaxed text-dark">
                     {step.body}
                   </p>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

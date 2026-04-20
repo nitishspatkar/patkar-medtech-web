@@ -1,5 +1,42 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export function AboutSection() {
-  return (
+  const valueRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const prefersReducedMotion = useRef(false);
+
+  useEffect(() => {
+    prefersReducedMotion.current = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion.current) return;
+
+    // Animate value lines with stagger
+    const visibleValues = valueRefs.current.filter(Boolean);
+    if (visibleValues.length > 0) {
+      gsap.from(visibleValues, {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: visibleValues[0],
+          start: "top 80%",
+        },
+      });
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
     <section
       id="about"
       className="relative bg-cream px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48"
@@ -26,17 +63,17 @@ export function AboutSection() {
           </div>
 
           <div className="space-y-6">
-            <div className="border-l-4 border-dark pl-6 py-2">
+            <div className="border-l-4 border-dark pl-6 py-2" ref={(el) => (valueRefs.current[0] = el)}>
               <p className="font-display text-2xl font-bold text-dark">
                 Clinical Inside Out.
               </p>
             </div>
-            <div className="border-l-4 border-dark pl-6 py-2">
+            <div className="border-l-4 border-dark pl-6 py-2" ref={(el) => (valueRefs.current[1] = el)}>
               <p className="font-display text-2xl font-bold text-dark">
                 Privacy as Architecture.
               </p>
             </div>
-            <div className="border-l-4 border-dark pl-6 py-2">
+            <div className="border-l-4 border-dark pl-6 py-2" ref={(el) => (valueRefs.current[2] = el)}>
               <p className="font-display text-2xl font-bold text-dark">
                 Sustainable by Default.
               </p>
