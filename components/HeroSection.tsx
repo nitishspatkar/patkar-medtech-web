@@ -29,27 +29,27 @@ export function HeroSection() {
         {/* Stat bar */}
         <div className="mt-20 border-t border-dark/20 pt-12 grid gap-12 sm:grid-cols-3">
           <div>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl">2×</div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl">120 min</div>
             <p className="text-sm leading-relaxed text-muted">
-              Time physicians spend on admin vs. patient care
+              Swiss acute care doctors spend 120 minutes every day on documentation alone — and that number is rising.
               <br />
-              <em className="text-xs">Annals of Internal Medicine</em>
+              <em className="text-xs">FMH/gfs.bern Physician Workplace Survey 2024</em>
             </p>
           </div>
           <div>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl">49%</div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl">19%</div>
             <p className="text-sm leading-relaxed text-muted">
-              of a physician's day spent in EHR — only 27% with patients
+              of a German physician's working time is consumed by administrative tasks — not patient care.
               <br />
-              <em className="text-xs">EvidenceCare</em>
+              <em className="text-xs">McKinsey Physician Survey</em>
             </p>
           </div>
           <div>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl">⅔</div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl">50%</div>
             <p className="text-sm leading-relaxed text-muted">
-              of physicians say admin duties harm quality of care
+              of a physician's day is spent on non-patient-facing activities.
               <br />
-              <em className="text-xs">MGH Physician Survey</em>
+              <em className="text-xs">University of Illinois / multiple studies</em>
             </p>
           </div>
         </div>
