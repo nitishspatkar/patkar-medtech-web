@@ -1,56 +1,62 @@
-import { FadeIn } from "./FadeIn";
+"use client";
 
 export function HeroSection() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden border-b border-pdl-border"
+      className="relative bg-cream px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48"
     >
-      <div
-        className="pdl-dot-pattern absolute inset-0 opacity-40"
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 bg-gradient-to-br from-pdl-bg via-pdl-highlight/20 to-pdl-bg"
-        aria-hidden
-      />
+      <div className="mx-auto max-w-6xl">
+        <div className="eyebrow">Medical Digitalization — Switzerland</div>
 
-      <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-20">
-        <FadeIn>
-          <h1 className="font-heading max-w-3xl text-4xl font-bold leading-[1.15] tracking-tight text-pdl-text sm:text-5xl lg:text-[3.25rem] animate-slide-up">
-            What if your EHR actually{" "}
-            <span className="bg-gradient-to-r from-pdl-accent to-pdl-accent-2 bg-clip-text text-transparent">
-              understood medicine?
-            </span>
-          </h1>
-        </FadeIn>
+        <h1 className="heading-display mb-8 max-w-4xl">
+          BUILD SMARTER.<br />
+          CARE BETTER.
+        </h1>
 
-        <FadeIn delayMs={80} className="mt-6">
-          <p className="max-w-2xl text-lg text-pdl-muted sm:text-xl animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Software built by clinicians, not spreadsheet companies. Purpose-built for real clinical practice.
-          </p>
-        </FadeIn>
+        <p className="mb-6 max-w-2xl text-lg text-muted leading-relaxed sm:text-xl">
+          Custom digital solutions for medical practices — built by a physician
+          and an engineer.
+        </p>
 
-        <FadeIn delayMs={140} className="mt-8">
-          <p className="max-w-3xl text-base text-pdl-text sm:text-lg leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            We are Patkar Digital Labs — a physician-engineer team building secure, thoughtful digital tools designed for medicine.
-          </p>
-        </FadeIn>
+        <p className="mb-12 max-w-3xl text-base leading-relaxed text-dark sm:text-lg">
+          We are Patkar Digital Labs. We design and build software that fits the
+          real-world complexity of clinical practice. No off-the-shelf systems.
+          No generic solutions. Just thoughtful, private, and sustainable digital
+          tools — made for your specific environment.
+        </p>
 
-        <FadeIn delayMs={200} className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-          <a
-            href="#our-approach"
-            className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-pdl-accent to-pdl-accent-2 px-7 py-3.5 text-center text-base font-semibold text-pdl-bg shadow-lg shadow-pdl-accent/20 transition-all hover:shadow-xl hover:shadow-pdl-accent/30 hover:-translate-y-1"
-          >
-            See How We Work
-          </a>
-          <a
-            href="#solutions"
-            className="inline-flex items-center justify-center rounded-lg border border-pdl-accent/30 bg-pdl-accent/5 px-7 py-3.5 text-center text-base font-semibold text-pdl-accent transition-all hover:bg-pdl-accent/10 hover:border-pdl-accent/50"
-          >
-            Explore Our Solutions
-          </a>
-        </FadeIn>
+        <a href="#our-approach" className="inline-flex items-center gap-2 text-lg font-semibold text-dark hover:opacity-70 transition-opacity">
+          → See How We Work
+        </a>
+
+        {/* Stat bar */}
+        <div className="mt-20 border-t border-dark/20 pt-12 grid gap-12 sm:grid-cols-3">
+          <div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl">2×</div>
+            <p className="text-sm leading-relaxed text-muted">
+              Time physicians spend on admin vs. patient care
+              <br />
+              <em className="text-xs">Annals of Internal Medicine</em>
+            </p>
+          </div>
+          <div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl">49%</div>
+            <p className="text-sm leading-relaxed text-muted">
+              of a physician's day spent in EHR — only 27% with patients
+              <br />
+              <em className="text-xs">EvidenceCare</em>
+            </p>
+          </div>
+          <div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl">⅔</div>
+            <p className="text-sm leading-relaxed text-muted">
+              of physicians say admin duties harm quality of care
+              <br />
+              <em className="text-xs">MGH Physician Survey</em>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

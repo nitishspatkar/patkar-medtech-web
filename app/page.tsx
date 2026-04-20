@@ -1,11 +1,11 @@
 import { AboutSection } from "@/components/AboutSection";
-import { AIConsiderations } from "@/components/AIConsiderations";
+import { CaseStudies } from "@/components/CaseStudies";
 import { ContactSection } from "@/components/ContactSection";
+import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
 import { NavBar } from "@/components/NavBar";
 import { OurApproach } from "@/components/OurApproach";
-import { Solutions } from "@/components/Solutions";
 import { WhyDigitalize } from "@/components/WhyDigitalize";
 
 export default function Home() {
@@ -16,9 +16,9 @@ export default function Home() {
         <HeroSection />
         <WhyDigitalize />
         <OurApproach />
-        <Solutions />
-        <AIConsiderations />
+        <CaseStudies />
         <AboutSection />
+        <FAQ />
         <ContactSection />
       </main>
       <Footer />
