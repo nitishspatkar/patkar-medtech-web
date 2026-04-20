@@ -59,12 +59,6 @@ export function NavBar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="text-sm font-semibold text-dark hover:opacity-70 transition-opacity"
-          >
-            Get in Touch
-          </a>
         </nav>
 
         <button
@@ -96,13 +90,6 @@ export function NavBar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="mt-2 rounded-lg px-4 py-3 text-center text-sm font-semibold text-dark bg-cream"
-            onClick={() => setOpen(false)}
-          >
-            Get in Touch
-          </a>
         </nav>
       </div>
     </header>
