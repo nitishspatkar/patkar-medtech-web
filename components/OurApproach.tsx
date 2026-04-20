@@ -7,25 +7,25 @@ const steps = [
     number: "01",
     title: "REQUIREMENTS ENGINEERING & INSIGHTS",
     body:
-      "Before we write a single line of code, we invest heavily in understanding your clinical workflows, pain points, and goals. This phase has always been the most valuable — and the most neglected industry-wide. We have made it our foundation. With the cost of prototyping now dramatically lower, we can finally operationalize proper RE the way it always should have been done.",
+      "The most expensive mistake in software is building the wrong thing perfectly. We prevent that. Before any development begins, we invest heavily in understanding your clinical reality — your workflows, your edge cases, your unstated needs. We surface the real problem, not just the visible one. This is where most projects cut corners. We do not.",
   },
   {
     number: "02",
     title: "EARLY PROTOTYPING",
     body:
-      "We put a working prototype in your hands faster than you expect. Instead of approving abstract specifications, you interact with the real system — early — and shape it while change is still cheap. This is not just a technical advantage. It is a fundamentally better way to build trust and reduce risk.",
+      "A picture is worth a thousand words. A working prototype is worth a thousand meetings. We build interactive prototypes early — not to impress, but to create a shared understanding of what we are building before the cost of change becomes high. The cost of building early prototypes has dropped dramatically. We use that to your advantage: you see the solution before it is built, and change it while change is still cheap.",
   },
   {
     number: "03",
     title: "AGILE, ITERATIVE DELIVERY",
     body:
-      "We work in short cycles, delivering value continuously. You always know what is being built and why. Our agile approach means the solution evolves with your feedback — not despite it. We bring deep experience in agile ways of working across complex, data-driven systems.",
+      "Clinical environments change. Priorities shift. New needs emerge. Our delivery model is designed for that reality — short cycles, continuous feedback, and a process that evolves with your practice rather than locking you into a spec written six months ago.",
   },
   {
     number: "04",
     title: "PRIVACY & SUSTAINABILITY BY DESIGN",
     body:
-      "Data protection is not a checkbox. It is built into every architectural decision from day one. We hold deep expertise in GDPR, Swiss nDSG, and the specific obligations of medical data. Security, auditability, and long-term maintainability are non-negotiable defaults — not afterthoughts.",
+      "Medical data is among the most sensitive in existence. We treat it that way. GDPR and Swiss nDSG compliance are not items on a checklist — they are the lens through which every architectural decision is made. The systems we build are secure, auditable, and designed to last.",
   },
 ];
 
@@ -46,7 +46,7 @@ export function OurApproach() {
         </h2>
 
         <p className="mb-16 max-w-2xl text-lg text-muted leading-relaxed">
-          Every practice is different. We do not arrive with a solution already in mind.
+          Most digitalization projects fail not because of bad engineering — but because the wrong problem was solved.
         </p>
 
         <div className="space-y-0 border-t border-dark/20">
@@ -88,8 +88,7 @@ export function OurApproach() {
 
         <div className="mt-16 rounded-lg border border-dark/20 bg-cream/50 p-8 sm:p-10">
           <p className="text-xl font-bold leading-tight text-dark sm:text-2xl">
-            "The falling cost of prototyping means we can finally invest in
-            requirements engineering the way it always should have been done."
+            Most digitalization projects fail not because of bad engineering — but because the wrong problem was solved.
           </p>
         </div>
       </div>

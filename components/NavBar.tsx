@@ -4,11 +4,11 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { href: "#why-digitalize", label: "Why Digitalize" },
-  { href: "#our-approach", label: "Our Approach" },
+  { href: "#why-digitalize", label: "The Cost of Bad Tools" },
+  { href: "#our-approach", label: "What We Do Differently" },
   { href: "#work", label: "Work" },
   { href: "#about", label: "About" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Contact" },
 ] as const;
 
 export function NavBar() {
@@ -43,7 +43,7 @@ export function NavBar() {
           href="#top"
           className="text-lg font-bold text-dark no-underline transition-opacity hover:opacity-70"
         >
-          Patkar Digital Labs
+          Patkar Medtech
         </a>
 
         <nav

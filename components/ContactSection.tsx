@@ -23,10 +23,10 @@ export function ContactSection() {
         {/* Email as hero */}
         <div className="mb-16">
           <a
-            href="mailto:hello@patkardigitallabs.ch"
+            href="mailto:hello@patkarmedtech.ch"
             className="inline-block font-display text-4xl sm:text-5xl font-bold text-dark hover:opacity-70 transition-opacity break-words"
           >
-            hello@patkardigitallabs.ch
+            hello@patkarmedtech.ch
           </a>
         </div>
 
@@ -115,10 +115,11 @@ export function ContactSection() {
           {/* Info box */}
           <div>
             <p className="text-base leading-relaxed text-dark mb-12">
-              Your message goes directly to our founding team.
-              No sales funnel. No automated follow-up. Just a real conversation.
+              You do not need to know exactly what you need. Most of the practices we work with came to us with a frustration, not a specification. Describe your situation — we will ask the right questions.
             </p>
             <p className="text-sm text-muted">
+              Your message goes directly to our founding team. No sales funnel. No automated follow-up. Just a real conversation.
+              <br /><br />
               Based in Switzerland. Available across the EU.
               <br />
               We work in English. German support coming soon.

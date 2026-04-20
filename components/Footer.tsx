@@ -4,11 +4,11 @@ export function Footer() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
           <div className="text-lg font-bold">
-            Patkar Digital Labs
+            Patkar Medtech
           </div>
 
           <p className="text-sm text-cream/60">
-            © 2025 Patkar Digital Labs. All rights reserved.
+            © 2025 Patkar Medtech. All rights reserved.
           </p>
 
           <div className="flex gap-6 text-sm">

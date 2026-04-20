@@ -2,11 +2,11 @@
 
 export function WhyDigitalize() {
   const benefits = [
-    "See more patients without longer hours",
-    "Cut documentation time with smarter workflows",
-    "Eliminate preventable scheduling errors",
-    "Reduce medication mistakes automatically",
-    "Make decisions backed by real-time data",
+    "Recover time lost to redundant documentation",
+    "Replace fragmented systems with coherent workflows",
+    "Reduce cognitive load during consultations",
+    "Eliminate preventable scheduling and medication errors",
+    "Make data work for you — not the other way around",
   ];
 
   return (
@@ -18,21 +18,23 @@ export function WhyDigitalize() {
         <div className="eyebrow text-cream/60">The Problem</div>
 
         <h2 className="heading-display mb-8 max-w-3xl">
-          YOU WENT INTO<br />
-          MEDICINE TO CARE<br />
-          FOR PEOPLE.
+          THE TOOLS SHOULD<br />
+          WORK FOR YOU.
         </h2>
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="max-w-2xl">
             <p className="mb-6 text-lg leading-relaxed">
-              But somewhere along the way, the paperwork took over. Administrative
-              overload, scheduling friction, disconnected data, medication tracking
-              — these are not inevitable parts of practice. They are solvable problems.
+              You chose medicine because of patients — not systems. Yet the average Swiss doctor now spends 120 minutes every day on documentation alone. In Germany, physicians report that administrative tasks consume nearly a fifth of their working time — and that share is growing.
+            </p>
+            <p className="mb-6 text-lg leading-relaxed">
+              Every extra click, every disconnected system, every redundant entry adds up — in time, in cognitive load, and in the quiet erosion of why you went into medicine in the first place.
+            </p>
+            <p className="mb-6 text-lg leading-relaxed">
+              These are not isolated frustrations. They are the predictable outcome of healthcare IT that was built for billing and compliance, not for clinical work. The result is systems that demand adaptation from doctors rather than offering it.
             </p>
             <p className="text-lg leading-relaxed">
-              And the cost is not just frustration. It is burnout. Missed diagnoses.
-              Rushed consultations. Energy spent on the wrong things.
+              These are engineering problems. And engineering problems have solutions.
             </p>
           </div>
 
@@ -53,9 +55,7 @@ export function WhyDigitalize() {
 
         <div className="mt-12 border-t border-cream/20 pt-12">
           <p className="text-2xl font-bold leading-tight">
-            Digitalization is not a disruption.<br />
-            It is the restoration of what<br />
-            medicine should feel like.
+            Digitalization is not a disruption. It is the restoration of what medicine should feel like.
           </p>
         </div>
       </div>
