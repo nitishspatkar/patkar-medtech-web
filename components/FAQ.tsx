@@ -6,27 +6,27 @@ const faqs = [
   {
     question: "How long is a typical engagement?",
     answer:
-      "It depends on scope. A focused digitalization project — such as scheduling automation or a medication assistant — typically runs 3 to 6 months from requirements to deployment. We always define scope together before committing to a timeline. [PLACEHOLDER — refine with actual data]",
+      "Most focused projects — a scheduling system, a medication tool, a clinical interface — run between three and six months from requirements to deployment. We always define scope together before committing to a timeline. No surprises.",
   },
   {
     question: "How do you handle data confidentiality?",
     answer:
-      "All data processed through our systems is handled under strict GDPR and Swiss nDSG compliance. We design for data minimisation, purpose limitation, and auditability from the first architectural decision. We are happy to sign NDAs and data processing agreements before any engagement begins.",
+      "Medical data is among the most sensitive in existence. We treat it that way. Every system we build is designed for GDPR and Swiss nDSG compliance from the first architectural decision — not retrofitted at the end. We sign NDAs and data processing agreements before any engagement begins.",
   },
   {
     question: "What is your pricing model?",
     answer:
-      "We work on a project basis or a retainer model depending on the nature of the engagement. We provide a clear proposal after an initial scoping conversation — no surprises. [PLACEHOLDER — update with actual model]",
+      "We work on a project basis or a retainer depending on the engagement. After an initial scoping conversation, we provide a clear proposal with no hidden costs. We do not charge for the first conversation.",
   },
   {
     question: "Do we need a technical team on our side?",
     answer:
-      "No. We handle the full technical scope. You need only to be available for requirements sessions and prototype reviews. We keep you informed without requiring you to understand the engineering.",
+      "No. We handle the full technical scope. What we need from you is availability for requirements sessions and prototype reviews — your clinical knowledge, not your IT department.",
   },
   {
-    question: "Can you work with our existing software systems?",
+    question: "Can you work with our existing systems?",
     answer:
-      "Yes. We assess your existing infrastructure during the requirements phase and design integrations where possible. We do not require you to start from scratch.",
+      "Yes. We assess your existing infrastructure during the requirements phase and design integrations where possible. We do not ask you to start from scratch.",
   },
 ];
 

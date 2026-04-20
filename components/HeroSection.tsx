@@ -7,23 +7,19 @@ export function HeroSection() {
       className="relative bg-cream px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="eyebrow">Medical Digitalization — Switzerland</div>
+        <div className="eyebrow">Medical Digitalization — Switzerland & EU</div>
 
         <h1 className="heading-display mb-8 max-w-4xl">
-          BUILD SMARTER.<br />
-          CARE BETTER.
+          BETTER TOOLS.<br />
+          BETTER MEDICINE.
         </h1>
 
         <p className="mb-6 max-w-2xl text-lg text-muted leading-relaxed sm:text-xl">
-          Custom digital solutions for medical practices — built by a physician
-          and an engineer.
+          Custom digital solutions for medical practices that understand how healthcare actually works.
         </p>
 
         <p className="mb-12 max-w-3xl text-base leading-relaxed text-dark sm:text-lg">
-          We are Patkar Digital Labs. We design and build software that fits the
-          real-world complexity of clinical practice. No off-the-shelf systems.
-          No generic solutions. Just thoughtful, private, and sustainable digital
-          tools — made for your specific environment.
+          The digitalization of healthcare was supposed to make practice easier. For most doctors, it made it harder. We build custom solutions that actually fit — compliant by design, built on deep clinical understanding, and shaped around the way you work.
         </p>
 
         <a href="#our-approach" className="inline-flex items-center gap-2 text-lg font-semibold text-dark hover:opacity-70 transition-opacity">

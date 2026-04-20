@@ -15,18 +15,13 @@ export function AboutSection() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 mb-16">
           <div className="max-w-2xl space-y-6">
             <p className="text-lg leading-relaxed text-dark">
-              Patkar Digital Labs was founded by a practising physician and a PhD
-              computer scientist. This is a rare combination — and it is our core
-              advantage. We do not translate between medicine and engineering.
-              We speak both languages natively.
+              Patkar Medtech was founded by Nitish and Sanjeet Patkar — a computer scientist and a physician who happen to be partners in life as well as work. Nitish holds a PhD in Computer Science from the University of Bern and brings deep expertise in requirements engineering, software architecture, agile development, and digital sustainability. Sanjeet is a Senior Physician in General Paediatrics at Kantonsspital Aarau, one of Switzerland&apos;s leading hospitals, with daily clinical experience in the real demands of hospital practice.
             </p>
             <p className="text-lg leading-relaxed text-dark">
-              Around this founding pair, we work with a carefully selected network
-              of associate clinicians — specialist doctors who join us on a
-              per-engagement basis, bringing domain expertise matched to your
-              specific environment. Whether your context is general practice,
-              surgical care, geriatrics, or beyond, we bring the right clinical
-              knowledge to the table.
+              This is not a consultancy that interprets medicine for engineers. We live in both worlds. We know what a clinical environment actually feels like — the workflows, the pressures, the moments where poor software costs time that belongs to patients.
+            </p>
+            <p className="text-lg leading-relaxed text-dark">
+              Around this founding pair, we work with a carefully selected network of associate clinicians — specialist doctors who join us per engagement, bringing domain expertise matched to your specific context.
             </p>
           </div>
 

@@ -6,20 +6,20 @@ const caseStudies = [
   {
     number: "01",
     category: "Medical Devices",
-    title: "Digital Infrastructure for Medical Implants",
-    body: "End-to-end digital interfaces and infrastructure for connected medical implants. Real-time monitoring, data logging, and clinical decision support — built to meet strict regulatory standards. [PLACEHOLDER: client name, outcome metrics]",
+    title: "Connected Implant Platform",
+    body: "A connected electro-stimulation implant requires software that works for two very different people: the patient living with it, and the clinician managing it. We architected a secure, multi-tenant platform to serve both — defining functional requirements, resolving deployment strategy, scoping regulatory compliance under GDPR and Swiss FADP, and prototyping the core user journeys. Validated feedback on those prototypes informed every major technical decision before development began. {/* PLACEHOLDER: client name, outcome metrics */}",
   },
   {
     number: "02",
     category: "Elderly Care",
-    title: "Medication Assistant",
-    body: "An intelligent medication management system for elderly patients and their caregivers. Reduces missed doses, flags adverse interactions, and lowers hospital readmission rates. [PLACEHOLDER: client name, outcome metrics]",
+    title: "Medication Adherence for Older Adults",
+    body: "The people who most need reliable medication support are often the least well-served by the tools designed to provide it. Existing apps rely on loud reminders and manual diaries — interaction patterns that work poorly for older adults with cognitive or physical limitations. We helped a Swiss eHealth startup define a better path: through user interviews, literature research, and hands-on prototyping of AI and voice-based concepts, we produced a requirements foundation and tested prototypes that placed the actual needs of older adults — and their caregivers — at the centre. An Innosuisse-recognised preliminary study, delivering risk reduction before development began. {/* PLACEHOLDER: client name, outcome metrics */}",
   },
   {
     number: "03",
     category: "Clinical Operations",
-    title: "Roster & Scheduling Optimisation",
-    body: "Smart staff scheduling that eliminates coordination overhead for clinical leads — freeing time and mental energy for patient outcomes, not spreadsheets. [PLACEHOLDER: client name, outcome metrics]",
+    title: "Staff Scheduling for a Paediatric Department",
+    body: "Roster planning in a hospital department is deceptively complex. Workload percentages, vacation requests, regulatory constraints on consecutive shifts and night duties, last-minute absences — all of it must be reconciled, often manually, across disconnected systems. For a Swiss paediatric department, we led the technical design of a scheduling tool that brought this complexity under control. The system integrated the relevant constraints, surfaced patterns through clear visualisations, and made both planned and spontaneous changes manageable. The result was a tool that reduced the cognitive burden of roster planning while giving clinical leads the analytical visibility they had never had before. {/* PLACEHOLDER: client name, outcome metrics */}",
   },
 ];
 
