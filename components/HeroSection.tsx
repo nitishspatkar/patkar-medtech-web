@@ -1,55 +1,17 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 export function HeroSection() {
-  const headlineRef = useRef<HTMLHeadingElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!headlineRef.current) return;
-
-    const words = headlineRef.current.querySelectorAll(".word");
-    gsap.fromTo(
-      words,
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          once: true,
-        },
-      }
-    );
-  }, []);
-
   return (
     <section
       id="top"
-      ref={containerRef}
       className="relative bg-cream px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48"
     >
       <div className="mx-auto max-w-6xl">
         <div className="eyebrow">Medical Digitalization — Switzerland</div>
 
-        <h1
-          ref={headlineRef}
-          className="heading-display mb-8 max-w-4xl"
-        >
-          <span className="word inline-block">BUILD</span>
-          <span className="word inline-block">SMARTER.</span>
-          <br />
-          <span className="word inline-block">CARE</span>
-          <span className="word inline-block">BETTER.</span>
+        <h1 className="heading-display mb-8 max-w-4xl">
+          BUILD SMARTER.<br />
+          CARE BETTER.
         </h1>
 
         <p className="mb-6 max-w-2xl text-lg text-muted leading-relaxed sm:text-xl">

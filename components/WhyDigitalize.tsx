@@ -1,39 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 export function WhyDigitalize() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const benefitRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    benefitRefs.current.forEach((el, i) => {
-      if (!el) return;
-      gsap.fromTo(
-        el,
-        { opacity: 0, x: -30 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.6,
-          delay: i * 0.1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 70%",
-            once: true,
-          },
-        }
-      );
-    });
-  }, []);
-
   const benefits = [
     "See more patients without longer hours",
     "Cut documentation time with smarter workflows",
@@ -45,7 +12,6 @@ export function WhyDigitalize() {
   return (
     <section
       id="why-digitalize"
-      ref={containerRef}
       className="relative bg-burgundy px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48 text-cream"
     >
       <div className="mx-auto max-w-6xl">
@@ -74,9 +40,6 @@ export function WhyDigitalize() {
             {benefits.map((benefit, i) => (
               <div
                 key={i}
-                ref={(el) => {
-                  benefitRefs.current[i] = el;
-                }}
                 className="flex gap-4 items-start pb-4 border-b border-cream/20 last:border-0"
               >
                 <div className="font-display text-2xl font-bold shrink-0 text-cream/60">
