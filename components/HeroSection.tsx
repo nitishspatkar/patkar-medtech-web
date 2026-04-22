@@ -71,10 +71,6 @@ export function HeroSection() {
           BETTER MEDICINE.
         </h1>
 
-        <p className="mb-6 max-w-2xl text-lg text-muted leading-relaxed sm:text-xl">
-          Custom digital solutions for medical practices that understand how healthcare actually works.
-        </p>
-
         <p className="mb-12 max-w-3xl text-base leading-relaxed text-dark sm:text-lg">
           The digitalization of healthcare was supposed to make practice easier. For most doctors, it made it harder. We build custom solutions that actually fit — compliant by design, built on deep clinical understanding, and shaped around the way you work.
         </p>
