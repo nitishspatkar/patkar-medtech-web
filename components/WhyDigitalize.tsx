@@ -106,13 +106,7 @@ export function WhyDigitalize() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="max-w-2xl" ref={bodyRef}>
             <p className="mb-6 text-lg leading-relaxed">
-              You chose medicine because of patients — not systems. Yet the average Swiss doctor now spends 120 minutes every day on documentation alone. In Germany, physicians report that administrative tasks consume nearly a fifth of their working time — and that share is growing.
-            </p>
-            <p className="mb-6 text-lg leading-relaxed">
-              Every extra click, every disconnected system, every redundant entry adds up — in time, in cognitive load, and in the quiet erosion of why you went into medicine in the first place.
-            </p>
-            <p className="mb-6 text-lg leading-relaxed">
-              These are not isolated frustrations. They are the predictable outcome of healthcare IT that was built for billing and compliance, not for clinical work. The result is systems that demand adaptation from doctors rather than offering it.
+              You chose medicine because of patients — not systems. Healthcare IT that was built for billing and compliance, not for clinical work. The result is systems that demand adaptation from doctors rather than offering it.
             </p>
             <p className="text-lg leading-relaxed">
               These are engineering problems. And engineering problems have solutions.
@@ -135,11 +129,7 @@ export function WhyDigitalize() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-cream/20 pt-12">
-          <p className="text-2xl font-bold leading-tight">
-            Digitalization is not a disruption. It is the restoration of what medicine should feel like.
-          </p>
-        </div>
+
       </div>
     </section>
   );

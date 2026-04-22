@@ -117,10 +117,6 @@ export function OurApproach() {
           YOUR CHALLENGES
         </h2>
 
-        <p className="mb-16 max-w-2xl text-lg text-muted leading-relaxed">
-          Most digitalization projects fail not because of bad engineering — but because the wrong problem was solved.
-        </p>
-
         <div className="space-y-0 border-t border-dark/20">
           {steps.map((step, i) => (
             <div
@@ -168,11 +164,7 @@ export function OurApproach() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-lg border border-dark/20 bg-cream/50 p-8 sm:p-10">
-          <p className="text-xl font-bold leading-tight text-dark sm:text-2xl">
-            Most digitalization projects fail not because of bad engineering — but because the wrong problem was solved.
-          </p>
-        </div>
+
       </div>
     </section>
   );

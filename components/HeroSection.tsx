@@ -71,10 +71,6 @@ export function HeroSection() {
           BETTER MEDICINE.
         </h1>
 
-        <p className="mb-6 max-w-2xl text-lg text-muted leading-relaxed sm:text-xl">
-          Custom digital solutions for medical practices that understand how healthcare actually works.
-        </p>
-
         <p className="mb-12 max-w-3xl text-base leading-relaxed text-dark sm:text-lg">
           The digitalization of healthcare was supposed to make practice easier. For most doctors, it made it harder. We build custom solutions that actually fit — compliant by design, built on deep clinical understanding, and shaped around the way you work.
         </p>
@@ -86,7 +82,7 @@ export function HeroSection() {
         {/* Stat bar */}
         <div className="mt-20 border-t border-dark/20 pt-12 grid gap-12 sm:grid-cols-3">
           <div ref={(el) => (statRefs.current[0] = el)}>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">0</span> min</div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">120</span> min</div>
             <p className="text-sm leading-relaxed text-muted">
               Swiss acute care doctors spend 120 minutes every day on documentation alone — and that number is rising.
               <br />
@@ -94,7 +90,7 @@ export function HeroSection() {
             </p>
           </div>
           <div ref={(el) => (statRefs.current[1] = el)}>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">0</span>%</div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">19</span>%</div>
             <p className="text-sm leading-relaxed text-muted">
               of a German physician's working time is consumed by administrative tasks — not patient care.
               <br />
@@ -102,7 +98,7 @@ export function HeroSection() {
             </p>
           </div>
           <div ref={(el) => (statRefs.current[2] = el)}>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">0</span>%</div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">50</span>%</div>
             <p className="text-sm leading-relaxed text-muted">
               of a physician's day is spent on non-patient-facing activities.
               <br />
