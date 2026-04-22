@@ -104,6 +104,8 @@ export function CaseStudies() {
       className="relative bg-burgundy px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48 text-cream"
     >
       <div className="mx-auto max-w-6xl">
+        <div className="accent-divider"></div>
+        
         <div className="eyebrow text-cream/60">Work</div>
 
         <h2 className="heading-display mb-16 max-w-3xl">
@@ -130,9 +132,9 @@ export function CaseStudies() {
                     {study.number}
                   </span>
                   <div className="min-w-0">
-                    <p className="text-sm font-semibold text-cream/60 uppercase letter-spacing-wider mb-1">
+                    <div className="category-badge">
                       {study.category}
-                    </p>
+                    </div>
                     <h3 className="font-display text-xl font-bold text-cream sm:text-2xl leading-tight">
                       {study.title}
                     </h3>

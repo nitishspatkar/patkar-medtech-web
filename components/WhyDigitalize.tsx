@@ -120,12 +120,21 @@ export function WhyDigitalize() {
                 ref={(el) => (benefitsRef.current[i] = el)}
                 className="flex gap-4 items-start pb-4 border-b border-cream/20 last:border-0"
               >
-                <div className="font-display text-2xl font-bold shrink-0 text-cream/60">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
+                <div className="icon-check">✓</div>
                 <p className="text-base leading-relaxed pt-1">{benefit}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Problem visualization placeholder */}
+        <div className="mt-16 hidden md:flex items-center justify-center">
+          <div className="w-full max-w-2xl aspect-video bg-cream/10 rounded-lg border-2 border-cream/20 flex items-center justify-center overflow-hidden">
+            <img 
+              src="/images/problem-visualization.jpg" 
+              alt="Healthcare IT challenges visualization" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 

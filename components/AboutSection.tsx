@@ -44,6 +44,8 @@ export function AboutSection() {
       className="relative bg-cream px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48"
     >
       <div className="mx-auto max-w-6xl">
+        <div className="accent-divider"></div>
+        
         <div className="eyebrow">About Us</div>
 
         <h2 className="heading-display mb-12 max-w-3xl">

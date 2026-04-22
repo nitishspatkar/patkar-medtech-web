@@ -113,6 +113,8 @@ export function FAQ() {
       <div className="mx-auto max-w-6xl">
         <div className="eyebrow text-cream/60">FAQ</div>
 
+        <div className="accent-divider"></div>
+
         <h2 className="heading-display mb-16 max-w-3xl">
           EVERYTHING YOU<br />
           NEED TO KNOW

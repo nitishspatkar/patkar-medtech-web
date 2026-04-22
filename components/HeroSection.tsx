@@ -66,18 +66,36 @@ export function HeroSection() {
       className="relative bg-cream px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48"
     >
       <div className="mx-auto max-w-6xl">
-        <h1 className="heading-display mb-8 max-w-4xl">
-          BETTER TOOLS.<br />
-          BETTER MEDICINE.
-        </h1>
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start mb-12">
+          <div>
+            <h1 className="heading-display mb-8 max-w-4xl">
+              BETTER TOOLS.<br />
+              BETTER MEDICINE.
+            </h1>
 
-        <p className="mb-12 max-w-3xl text-base leading-relaxed text-dark sm:text-lg">
-          The digitalization of healthcare was supposed to make practice easier. For most doctors, it made it harder. We build custom solutions that actually fit — compliant by design, built on deep clinical understanding, and shaped around the way you work.
-        </p>
+            <p className="mb-12 max-w-3xl text-base leading-relaxed text-dark sm:text-lg">
+              The digitalization of healthcare was supposed to make practice easier. For most doctors, it made it harder. We build custom solutions that actually fit — compliant by design, built on deep clinical understanding, and shaped around the way you work.
+            </p>
 
-        <a href="#our-approach" className="inline-flex items-center gap-2 text-lg font-semibold text-dark hover:opacity-70 transition-opacity">
-          → See How We Work
-        </a>
+            <a href="#our-approach" className="inline-flex items-center gap-2 text-lg font-semibold text-dark hover:opacity-70 transition-opacity">
+              → See How We Work
+            </a>
+          </div>
+
+          {/* Hero illustration placeholder */}
+          <div className="hidden lg:flex items-center justify-center">
+            <div className="w-full aspect-square bg-burgundy/5 rounded-lg border-2 border-burgundy/20 flex items-center justify-center">
+              <img 
+                src="/images/hero-illustration.jpg" 
+                alt="Healthcare digitalization illustration" 
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Accent divider */}
+        <div className="accent-divider"></div>
 
         {/* Stat bar */}
         <div className="mt-20 border-t border-dark/20 pt-12 grid gap-12 sm:grid-cols-3">
