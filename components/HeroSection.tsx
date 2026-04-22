@@ -82,7 +82,7 @@ export function HeroSection() {
         {/* Stat bar */}
         <div className="mt-20 border-t border-dark/20 pt-12 grid gap-12 sm:grid-cols-3">
           <div ref={(el) => (statRefs.current[0] = el)}>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">0</span> min</div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">120</span> min</div>
             <p className="text-sm leading-relaxed text-muted">
               Swiss acute care doctors spend 120 minutes every day on documentation alone — and that number is rising.
               <br />
@@ -90,7 +90,7 @@ export function HeroSection() {
             </p>
           </div>
           <div ref={(el) => (statRefs.current[1] = el)}>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">0</span>%</div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">19</span>%</div>
             <p className="text-sm leading-relaxed text-muted">
               of a German physician's working time is consumed by administrative tasks — not patient care.
               <br />
@@ -98,7 +98,7 @@ export function HeroSection() {
             </p>
           </div>
           <div ref={(el) => (statRefs.current[2] = el)}>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">0</span>%</div>
+            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">50</span>%</div>
             <p className="text-sm leading-relaxed text-muted">
               of a physician's day is spent on non-patient-facing activities.
               <br />
