@@ -104,8 +104,6 @@ export function CaseStudies() {
       className="relative bg-burgundy px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48 text-cream"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="accent-divider"></div>
-        
         <div className="eyebrow text-cream/60">Work</div>
 
         <h2 className="heading-display mb-16 max-w-3xl">

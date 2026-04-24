@@ -66,7 +66,7 @@ export function HeroSection() {
       className="relative bg-cream px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start mb-12">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           <div>
             <h1 className="heading-display mb-8 max-w-4xl">
               BETTER TOOLS.<br />
@@ -80,6 +80,28 @@ export function HeroSection() {
             <a href="#our-approach" className="inline-flex items-center gap-2 text-lg font-semibold text-dark hover:opacity-70 transition-opacity">
               → See How We Work
             </a>
+
+            {/* Stats integrated into hero */}
+            <div className="mt-16 space-y-6 pt-12 border-t border-dark/10">
+              <div ref={(el) => (statRefs.current[0] = el)}>
+                <div className="heading-display mb-2 text-2xl sm:text-3xl"><span className="stat-number">120</span> min</div>
+                <p className="text-sm leading-relaxed text-muted">
+                  Swiss acute care doctors spend 120 minutes every day on documentation alone — and that number is rising.
+                </p>
+              </div>
+              <div ref={(el) => (statRefs.current[1] = el)}>
+                <div className="heading-display mb-2 text-2xl sm:text-3xl"><span className="stat-number">19</span>%</div>
+                <p className="text-sm leading-relaxed text-muted">
+                  of a German physician's working time is consumed by administrative tasks — not patient care.
+                </p>
+              </div>
+              <div ref={(el) => (statRefs.current[2] = el)}>
+                <div className="heading-display mb-2 text-2xl sm:text-3xl"><span className="stat-number">50</span>%</div>
+                <p className="text-sm leading-relaxed text-muted">
+                  of a physician's day is spent on non-patient-facing activities.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Hero illustration placeholder */}
@@ -91,37 +113,6 @@ export function HeroSection() {
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>
-          </div>
-        </div>
-
-        {/* Accent divider */}
-        <div className="accent-divider"></div>
-
-        {/* Stat bar */}
-        <div className="mt-20 border-t border-dark/20 pt-12 grid gap-12 sm:grid-cols-3">
-          <div ref={(el) => (statRefs.current[0] = el)}>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">120</span> min</div>
-            <p className="text-sm leading-relaxed text-muted">
-              Swiss acute care doctors spend 120 minutes every day on documentation alone — and that number is rising.
-              <br />
-              <em className="text-xs">FMH/gfs.bern Physician Workplace Survey 2024</em>
-            </p>
-          </div>
-          <div ref={(el) => (statRefs.current[1] = el)}>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">19</span>%</div>
-            <p className="text-sm leading-relaxed text-muted">
-              of a German physician's working time is consumed by administrative tasks — not patient care.
-              <br />
-              <em className="text-xs">McKinsey Physician Survey</em>
-            </p>
-          </div>
-          <div ref={(el) => (statRefs.current[2] = el)}>
-            <div className="heading-display mb-2 text-3xl sm:text-4xl"><span className="stat-number">50</span>%</div>
-            <p className="text-sm leading-relaxed text-muted">
-              of a physician's day is spent on non-patient-facing activities.
-              <br />
-              <em className="text-xs">University of Illinois / multiple studies</em>
-            </p>
           </div>
         </div>
       </div>
