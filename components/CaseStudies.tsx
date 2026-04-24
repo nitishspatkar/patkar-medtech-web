@@ -101,7 +101,7 @@ export function CaseStudies() {
   return (
     <section
       id="work"
-      className="relative bg-burgundy px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48 text-cream"
+      className="relative bg-gradient-to-br from-[#1a1a1a] to-burgundy px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48 text-cream"
     >
       <div className="mx-auto max-w-6xl">
         <div className="eyebrow text-cream/60">Work</div>
@@ -111,22 +111,22 @@ export function CaseStudies() {
           STORIES
         </h2>
 
-        <div className="space-y-0 border-t border-cream/20">
+        <div className="space-y-4 border-t border-cream/20">
           {caseStudies.map((study, i) => (
             <div
               key={i}
               ref={(el) => (caseRefs.current[i] = el)}
-              className="border-b border-cream/20 py-6 sm:py-8"
+              className={`rounded-lg p-6 sm:p-8 border transition-all ${openIndex === i ? 'bg-cream/10 border-teal/50' : 'border-cream/20 hover:bg-cream/5'}`}
             >
               <button
                 type="button"
                 onClick={() => handleAccordionClick(i)}
-                className="w-full flex items-start justify-between gap-4 text-left transition-opacity hover:opacity-70"
+                className="w-full flex items-start justify-between gap-4 text-left"
                 aria-expanded={openIndex === i}
                 aria-controls={`case-${i}`}
               >
                 <div className="flex items-start gap-6 flex-1 min-w-0">
-                  <span className="font-display text-2xl font-bold text-cream/60 shrink-0 pt-1">
+                  <span className={`font-display text-2xl font-bold shrink-0 pt-1 transition-colors ${openIndex === i ? 'text-teal' : 'text-cream/60'}`}>
                     {study.number}
                   </span>
                   <div className="min-w-0">
@@ -138,7 +138,7 @@ export function CaseStudies() {
                     </h3>
                   </div>
                 </div>
-                <span className="text-2xl font-light text-cream shrink-0 pt-1">
+                <span className={`text-2xl font-light shrink-0 pt-1 transition-colors ${openIndex === i ? 'text-teal' : 'text-cream/60'}`}>
                   {openIndex === i ? "−" : "+"}
                 </span>
               </button>

@@ -65,17 +65,17 @@ export function AboutSection() {
           </div>
 
           <div className="space-y-6">
-            <div className="border-l-4 border-dark pl-6 py-2" ref={(el) => (valueRefs.current[0] = el)}>
+            <div className="border-l-4 border-teal pl-6 py-3 rounded-sm" ref={(el) => (valueRefs.current[0] = el)}>
               <p className="font-display text-2xl font-bold text-dark">
                 Clinical Inside Out.
               </p>
             </div>
-            <div className="border-l-4 border-dark pl-6 py-2" ref={(el) => (valueRefs.current[1] = el)}>
+            <div className="border-l-4 border-teal pl-6 py-3 rounded-sm" ref={(el) => (valueRefs.current[1] = el)}>
               <p className="font-display text-2xl font-bold text-dark">
                 Privacy as Architecture.
               </p>
             </div>
-            <div className="border-l-4 border-dark pl-6 py-2" ref={(el) => (valueRefs.current[2] = el)}>
+            <div className="border-l-4 border-teal pl-6 py-3 rounded-sm" ref={(el) => (valueRefs.current[2] = el)}>
               <p className="font-display text-2xl font-bold text-dark">
                 Sustainable by Default.
               </p>

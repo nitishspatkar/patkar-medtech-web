@@ -115,29 +115,29 @@ export function OurApproach() {
           DO DIFFERENTLY
         </h2>
 
-        <div className="space-y-0 border-t border-dark/20">
+        <div className="space-y-4 border-t border-dark/10">
           {steps.map((step, i) => (
             <div
               key={i}
               ref={(el) => (stepRefs.current[i] = el)}
-              className="border-b border-dark/20 py-6 sm:py-8"
+              className={`card-modern border-l-4 transition-all ${openIndex === i ? 'border-l-teal bg-white shadow-lg' : 'border-l-transparent hover:bg-white/50'}`}
             >
               <button
                 type="button"
                 onClick={() => handleAccordionClick(i)}
-                className="w-full flex items-start justify-between gap-4 text-left transition-opacity hover:opacity-70"
+                className="w-full flex items-start justify-between gap-4 text-left p-2"
                 aria-expanded={openIndex === i}
                 aria-controls={`step-${i}`}
               >
                 <div className="flex items-start gap-6 flex-1 min-w-0">
-                  <span className="font-display text-2xl font-bold text-muted shrink-0 pt-1">
+                  <span className={`font-display text-2xl font-bold shrink-0 pt-1 ${openIndex === i ? 'text-teal' : 'text-muted'}`}>
                     {step.number}
                   </span>
                   <h3 className="font-display text-xl font-bold text-dark sm:text-2xl leading-tight">
                     {step.title}
                   </h3>
                 </div>
-                <span className="text-2xl font-light text-dark shrink-0 pt-1">
+                <span className={`text-2xl font-light shrink-0 pt-1 transition-colors ${openIndex === i ? 'text-teal' : 'text-muted'}`}>
                   {openIndex === i ? "−" : "+"}
                 </span>
               </button>

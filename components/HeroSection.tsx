@@ -70,21 +70,24 @@ export function HeroSection() {
         <div className="mb-20 lg:mb-32">
           <p className="mb-8 text-lg text-muted font-semibold">THE REALITY</p>
           
-          <div className="grid gap-12 sm:grid-cols-3">
-            <div ref={(el) => (statRefs.current[0] = el)}>
-              <div className="heading-display mb-3 text-4xl sm:text-5xl lg:text-6xl"><span className="stat-number">120</span> MIN</div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            <div ref={(el) => (statRefs.current[0] = el)} className="stat-card">
+              <div className="heading-display mb-4 text-4xl sm:text-5xl"><span className="stat-number">120</span></div>
+              <p className="text-sm font-semibold text-teal mb-2">MIN / DAY</p>
               <p className="text-base leading-relaxed text-dark">
-                Swiss acute care doctors spend every day on documentation alone.
+                Swiss acute care doctors spend on documentation alone.
               </p>
             </div>
-            <div ref={(el) => (statRefs.current[1] = el)}>
-              <div className="heading-display mb-3 text-4xl sm:text-5xl lg:text-6xl"><span className="stat-number">19</span>%</div>
+            <div ref={(el) => (statRefs.current[1] = el)} className="stat-card">
+              <div className="heading-display mb-4 text-4xl sm:text-5xl"><span className="stat-number">19</span>%</div>
+              <p className="text-sm font-semibold text-teal mb-2">OF WORKING TIME</p>
               <p className="text-base leading-relaxed text-dark">
-                of a German physician's working time consumed by administrative tasks.
+                German physicians spend on administrative tasks.
               </p>
             </div>
-            <div ref={(el) => (statRefs.current[2] = el)}>
-              <div className="heading-display mb-3 text-4xl sm:text-5xl lg:text-6xl"><span className="stat-number">50</span>%</div>
+            <div ref={(el) => (statRefs.current[2] = el)} className="stat-card">
+              <div className="heading-display mb-4 text-4xl sm:text-5xl"><span className="stat-number">50</span>%</div>
+              <p className="text-sm font-semibold text-teal mb-2">NON-PATIENT TIME</p>
               <p className="text-base leading-relaxed text-dark">
                 of a physician's day spent on non-patient-facing activities.
               </p>
@@ -104,7 +107,7 @@ export function HeroSection() {
               The digitalization of healthcare was supposed to make practice easier. For most doctors, it made it harder. We build custom solutions that actually fit — compliant by design, built on deep clinical understanding, and shaped around the way you work.
             </p>
 
-            <a href="#our-approach" className="inline-flex items-center gap-2 text-lg font-semibold text-dark hover:opacity-70 transition-opacity">
+            <a href="#our-approach" className="btn-modern">
               → See How We Work
             </a>
           </div>

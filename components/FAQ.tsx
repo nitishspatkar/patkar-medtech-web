@@ -108,7 +108,7 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="relative bg-burgundy px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48 text-cream"
+      className="relative bg-gradient-to-br from-burgundy via-burgundy to-[#3D1515] px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48 text-cream"
     >
       <div className="mx-auto max-w-6xl">
         <div className="eyebrow text-cream/60">FAQ</div>
@@ -118,24 +118,24 @@ export function FAQ() {
           NEED TO KNOW
         </h2>
 
-        <div className="space-y-0 border-t border-cream/20 max-w-4xl">
+        <div className="space-y-4 border-t border-cream/20 max-w-4xl">
           {faqs.map((faq, i) => (
             <div
               key={i}
               ref={(el) => (faqRefs.current[i] = el)}
-              className="border-b border-cream/20 py-6 sm:py-8"
+              className={`rounded-lg p-6 sm:p-8 border transition-all ${openIndex === i ? 'bg-cream/10 border-teal/50' : 'border-cream/20 hover:bg-cream/5'}`}
             >
               <button
                 type="button"
                 onClick={() => handleAccordionClick(i)}
-                className="w-full flex items-start justify-between gap-4 text-left transition-opacity hover:opacity-70"
+                className="w-full flex items-start justify-between gap-4 text-left"
                 aria-expanded={openIndex === i}
                 aria-controls={`faq-${i}`}
               >
-                <h3 className="font-bold text-lg sm:text-xl leading-tight pr-4">
+                <h3 className={`font-bold text-lg sm:text-xl leading-tight pr-4 transition-colors ${openIndex === i ? 'text-teal' : 'text-cream'}`}>
                   {faq.question}
                 </h3>
-                <span className="text-2xl font-light shrink-0 pt-0">
+                <span className={`text-2xl font-light shrink-0 pt-0 transition-colors ${openIndex === i ? 'text-teal' : 'text-cream/60'}`}>
                   {openIndex === i ? "−" : "+"}
                 </span>
               </button>

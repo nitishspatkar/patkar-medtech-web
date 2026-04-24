@@ -93,7 +93,7 @@ export function WhyDigitalize() {
   return (
     <section
       id="why-digitalize"
-      className="relative bg-burgundy px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48 text-cream"
+      className="relative bg-gradient-to-br from-burgundy via-burgundy to-[#3D1515] px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48 text-cream"
     >
       <div className="mx-auto max-w-6xl">
         <div className="eyebrow text-cream/60" ref={eyebrowRef}>The Problem</div>
@@ -118,10 +118,10 @@ export function WhyDigitalize() {
               <div
                 key={i}
                 ref={(el) => (benefitsRef.current[i] = el)}
-                className="flex gap-4 items-start pb-4 border-b border-cream/20 last:border-0"
+                className="flex gap-4 items-start pb-4 border-b border-cream/30 last:border-0 group"
               >
                 <div className="icon-check">✓</div>
-                <p className="text-base leading-relaxed pt-1">{benefit}</p>
+                <p className="text-base leading-relaxed pt-1 group-hover:text-cream/90 transition-colors">{benefit}</p>
               </div>
             ))}
           </div>

@@ -8,6 +8,9 @@
   --color-burgundy: #2C0B0B;
   --color-dark: #0D0D0D;
   --color-muted: #6B6056;
+  --color-teal: #0D7C6F;
+  --color-sage: #5B8E7D;
+  --color-light-bg: #F8F7F5;
 }
 
 html {
@@ -64,80 +67,96 @@ body {
   opacity: 1;
 }
 
-/* Accent divider lines */
-.accent-divider {
-  height: 3px;
-  background: var(--color-burgundy);
-  margin: 2rem 0;
-}
-
-.accent-divider-sm {
-  height: 2px;
-  background: var(--color-burgundy);
-  margin: 1.5rem 0;
-}
-
-/* Geometric decorative elements */
-.accent-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--color-burgundy);
-  border-radius: 50%;
-}
-
-.accent-dot-row {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin: 1.5rem 0;
-}
-
-.accent-dot-row span {
-  width: 4px;
-  height: 4px;
-  background: var(--color-burgundy);
-  border-radius: 50%;
-}
-
-/* Section accent background */
-.section-accent-bg {
-  position: relative;
-}
-
-.section-accent-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--color-burgundy);
-}
-
 /* Icon styles for benefits and categories */
 .icon-check {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  background: var(--color-burgundy);
+  width: 24px;
+  height: 24px;
+  background: var(--color-teal);
   color: var(--color-cream);
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   flex-shrink: 0;
 }
 
 .category-badge {
   display: inline-block;
-  padding: 0.4rem 0.8rem;
-  background: var(--color-burgundy);
+  padding: 0.5rem 1rem;
+  background: var(--color-teal);
   color: var(--color-cream);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+/* Modern card styles */
+.card-modern {
+  background: var(--color-light-bg);
+  border: 1px solid rgba(13, 124, 111, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card-modern:hover {
+  border-color: var(--color-teal);
+  box-shadow: 0 8px 24px rgba(13, 124, 111, 0.12);
+  transform: translateY(-4px);
+}
+
+/* Stat card styling */
+.stat-card {
+  background: linear-gradient(135deg, var(--color-light-bg) 0%, var(--color-cream) 100%);
+  border: 1px solid rgba(13, 124, 111, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-teal), var(--color-sage));
+}
+
+/* Modern button */
+.btn-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--color-teal);
+  color: var(--color-cream);
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-modern:hover {
+  background: var(--color-sage);
+  box-shadow: 0 12px 32px rgba(13, 124, 111, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
