@@ -63,3 +63,81 @@ body {
   max-height: 1000px;
   opacity: 1;
 }
+
+/* Accent divider lines */
+.accent-divider {
+  height: 3px;
+  background: var(--color-burgundy);
+  margin: 2rem 0;
+}
+
+.accent-divider-sm {
+  height: 2px;
+  background: var(--color-burgundy);
+  margin: 1.5rem 0;
+}
+
+/* Geometric decorative elements */
+.accent-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-burgundy);
+  border-radius: 50%;
+}
+
+.accent-dot-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.accent-dot-row span {
+  width: 4px;
+  height: 4px;
+  background: var(--color-burgundy);
+  border-radius: 50%;
+}
+
+/* Section accent background */
+.section-accent-bg {
+  position: relative;
+}
+
+.section-accent-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-burgundy);
+}
+
+/* Icon styles for benefits and categories */
+.icon-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--color-burgundy);
+  color: var(--color-cream);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: var(--color-burgundy);
+  color: var(--color-cream);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}

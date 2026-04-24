@@ -110,11 +110,9 @@ export function OurApproach() {
       className="relative bg-cream px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="eyebrow">How We Work</div>
-
-        <h2 className="heading-display mb-4 max-w-3xl">
-          HOW WE SOLVE<br />
-          YOUR CHALLENGES
+        <h2 className="heading-display mb-16 max-w-3xl">
+          WHAT WE<br />
+          DO DIFFERENTLY
         </h2>
 
         <div className="space-y-0 border-t border-dark/20">
