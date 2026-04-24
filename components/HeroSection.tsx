@@ -68,7 +68,7 @@ export function HeroSection() {
       <div className="mx-auto max-w-6xl">
         {/* Stats as primary hero content */}
         <div className="mb-20 lg:mb-32">
-          <p className="mb-8 text-lg text-muted font-semibold">THE PROBLEM</p>
+          <p className="mb-8 text-lg text-muted font-semibold">THE REALITY</p>
           
           <div className="grid gap-12 sm:grid-cols-3">
             <div ref={(el) => (statRefs.current[0] = el)}>
