@@ -63,50 +63,55 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="relative bg-cream px-4 py-20 sm:px-6 sm:py-32 lg:px-8 lg:py-48"
+      className="relative bg-cream px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
+        {/* Stats as primary hero content */}
+        <div className="mb-20 lg:mb-32">
+          <p className="mb-8 text-lg text-muted font-semibold">THE PROBLEM</p>
+          
+          <div className="grid gap-12 sm:grid-cols-3">
+            <div ref={(el) => (statRefs.current[0] = el)}>
+              <div className="heading-display mb-3 text-4xl sm:text-5xl lg:text-6xl"><span className="stat-number">120</span></div>
+              <p className="text-base leading-relaxed text-dark">
+                minutes every day Swiss acute care doctors spend on documentation alone.
+              </p>
+            </div>
+            <div ref={(el) => (statRefs.current[1] = el)}>
+              <div className="heading-display mb-3 text-4xl sm:text-5xl lg:text-6xl"><span className="stat-number">19</span>%</div>
+              <p className="text-base leading-relaxed text-dark">
+                of a German physician's working time consumed by administrative tasks.
+              </p>
+            </div>
+            <div ref={(el) => (statRefs.current[2] = el)}>
+              <div className="heading-display mb-3 text-4xl sm:text-5xl lg:text-6xl"><span className="stat-number">50</span>%</div>
+              <p className="text-base leading-relaxed text-dark">
+                of a physician's day spent on non-patient-facing activities.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Message section below */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center pt-12 border-t border-dark/10">
           <div>
-            <h1 className="heading-display mb-8 max-w-4xl">
+            <h1 className="heading-display mb-8 max-w-3xl">
               BETTER TOOLS.<br />
               BETTER MEDICINE.
             </h1>
 
-            <p className="mb-12 max-w-3xl text-base leading-relaxed text-dark sm:text-lg">
+            <p className="mb-8 max-w-2xl text-base leading-relaxed text-dark sm:text-lg">
               The digitalization of healthcare was supposed to make practice easier. For most doctors, it made it harder. We build custom solutions that actually fit — compliant by design, built on deep clinical understanding, and shaped around the way you work.
             </p>
 
             <a href="#our-approach" className="inline-flex items-center gap-2 text-lg font-semibold text-dark hover:opacity-70 transition-opacity">
               → See How We Work
             </a>
-
-            {/* Stats integrated into hero */}
-            <div className="mt-16 space-y-6 pt-12 border-t border-dark/10">
-              <div ref={(el) => (statRefs.current[0] = el)}>
-                <div className="heading-display mb-2 text-2xl sm:text-3xl"><span className="stat-number">120</span> min</div>
-                <p className="text-sm leading-relaxed text-muted">
-                  Swiss acute care doctors spend 120 minutes every day on documentation alone — and that number is rising.
-                </p>
-              </div>
-              <div ref={(el) => (statRefs.current[1] = el)}>
-                <div className="heading-display mb-2 text-2xl sm:text-3xl"><span className="stat-number">19</span>%</div>
-                <p className="text-sm leading-relaxed text-muted">
-                  of a German physician's working time is consumed by administrative tasks — not patient care.
-                </p>
-              </div>
-              <div ref={(el) => (statRefs.current[2] = el)}>
-                <div className="heading-display mb-2 text-2xl sm:text-3xl"><span className="stat-number">50</span>%</div>
-                <p className="text-sm leading-relaxed text-muted">
-                  of a physician's day is spent on non-patient-facing activities.
-                </p>
-              </div>
-            </div>
           </div>
 
-          {/* Hero illustration placeholder */}
+          {/* Hero illustration */}
           <div className="hidden lg:flex items-center justify-center">
-            <div className="w-full aspect-square bg-burgundy/5 rounded-lg border-2 border-burgundy/20 flex items-center justify-center">
+            <div className="w-full aspect-square bg-burgundy/5 rounded-lg border-2 border-burgundy/20 flex items-center justify-center overflow-hidden">
               <img 
                 src="/images/hero-illustration.jpg" 
                 alt="Healthcare digitalization illustration" 
