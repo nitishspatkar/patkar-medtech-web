@@ -72,9 +72,9 @@ export function HeroSection() {
           
           <div className="grid gap-12 sm:grid-cols-3">
             <div ref={(el) => (statRefs.current[0] = el)}>
-              <div className="heading-display mb-3 text-4xl sm:text-5xl lg:text-6xl"><span className="stat-number">120</span></div>
+              <div className="heading-display mb-3 text-4xl sm:text-5xl lg:text-6xl"><span className="stat-number">120</span> MIN</div>
               <p className="text-base leading-relaxed text-dark">
-                minutes every day Swiss acute care doctors spend on documentation alone.
+                Swiss acute care doctors spend every day on documentation alone.
               </p>
             </div>
             <div ref={(el) => (statRefs.current[1] = el)}>
